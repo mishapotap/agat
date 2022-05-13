@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "navigation-react-native",
-    "slug": "navigation-react-native",
+    "name": "agat-app",
+    "slug": "agat-app",
     "version": "1.0.0",
     "orientation": "landscape",
     "icon": "./assets/icon.png",

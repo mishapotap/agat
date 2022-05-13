@@ -1,19 +1,23 @@
-import React from 'react'
-import AppNavigator from './navigation/AppNavigator'
-import { View, Text } from "react-native"
-import 'react-native-gesture-handler';
+import React from "react";
+import "react-native-gesture-handler";
+
+// Navigation
+import { NavigationContainer, useNavigationContainerRef } from "@react-navigation/native";
+import AppNavigation from "./navigation/AppNavigation";
+import Navigation from "./components/Navigation";
+
 
 export default function App() {
-  return (
-    <AppNavigator/>
-    // <View
-    //   style={{
-    //     flex: 1,
-    //     justifyContent: "center",
-    //     alignItems: "center",
-    //   }}
-    // >
-    //   <Text>Universal React with Expo</Text>
-    // </View>
-  );
+	const ref = useNavigationContainerRef();
+	return (
+		<>
+			<NavigationContainer ref={ref}>
+				<AppNavigation/>
+			</NavigationContainer>
+			<Navigation navigate={ref.navigate} />
+		</>
+	);
 }
+
+
+// SafeAreaView?
