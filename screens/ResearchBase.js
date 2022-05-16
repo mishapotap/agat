@@ -2,8 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 // import { Video } from "expo-av";
 
-import Orbital from "../assets/svg/Home/Orbital";
-import Roscosmos from "../assets/svg/Home/Roscosmos";
+import Orbital from "../assets/svg/Home_1";
+import Roscosmos from "../assets/svg/Home_2";
 // Layout
 import Layout from "../layout/Layout";
 

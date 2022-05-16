@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-export default function Energy() {
+export default function About_1_4() {
 	return (
 		<Svg
 			width="126"

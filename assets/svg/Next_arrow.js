@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Path, Defs, Stop, LinearGradient } from "react-native-svg";
 
-export default function Next() {
+export default function Next_arrow() {
 	return (
 		<Svg
 			width="31"

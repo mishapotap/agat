@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-export default function Roscosmos() {
+export default function About_1_1() {
 	return (
 		<Svg
 			width="64"

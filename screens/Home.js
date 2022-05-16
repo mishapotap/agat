@@ -1,14 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+// Video
 import { Video } from "expo-av";
-
-import Orbital from "../assets/svg/Home/Orbital";
-import Roscosmos from "../assets/svg/Home/Roscosmos";
 // Layout
 import Layout from "../layout/Layout";
+// Svg
+import { Home_1, Home_2 } from "../constants/svg";
 
 const Home = () => {
-    
 	return (
 		<Layout>
 			<Video
@@ -24,8 +23,8 @@ const Home = () => {
 					Национальный {"\n"} орбитальный исследовательский центр
 				</Text>
 				<View style={styles.content_logos}>
-					<Roscosmos />
-					<Orbital />
+					<Home_1 />
+					<Home_2 />
 				</View>
 				<Text style={styles.content__title}>Космос</Text>
 				<Text style={styles.content__subtitle}>Пространство инноваций</Text>
@@ -50,10 +49,6 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		right: 0,
 		width: "89%",
-		// marginTop: 0,
-		// marginRight: 'auto',
-		// marginBottom: 0,
-		// marginLeft: 'auto',
 	},
 	content__text: {
 		textAlign: "center",
@@ -71,7 +66,6 @@ const styles = StyleSheet.create({
 		width: 300,
 		alignSelf: "center",
 		justifyContent: "space-between",
-		alignItems: "flex-end",
 	},
 	content__title: {
 		textAlign: "center",

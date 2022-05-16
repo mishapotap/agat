@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-export default function SidebarIcon_2() {
+export default function Navigation_2() {
 	return (
 		<Svg
 			width="60"

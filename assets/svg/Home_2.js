@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Path, Rect, G, Defs, ClipPath } from "react-native-svg";
 
-export default function Orbital() {
+export default function Home_2() {
 	return (
 		<Svg
 			width="140"

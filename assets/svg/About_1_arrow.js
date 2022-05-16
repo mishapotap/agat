@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-export default function Arrow() {
+export default function About_1_arrow() {
 	return (
 		<Svg
 			width="83"

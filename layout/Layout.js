@@ -2,7 +2,7 @@ import { useLinkTo } from "@react-navigation/native";
 import React from "react";
 import { View, StyleSheet, Pressable } from "react-native";
 
-import Next from "../assets/svg/Next";
+import { Next_arrow } from "../constants/svg";
 import Navigation from "../components/Navigation";
 
 const Layout = ({ children }) => {
@@ -11,8 +11,8 @@ const Layout = ({ children }) => {
 		<View style={styles.container}>
 			{/* <Navigation /> */}
 			<View style={styles.home}>{children}</View>
-			<Pressable style={styles.next__button} onPress={() => linkTo("/Home")}>
-				<Next />
+			<Pressable style={styles.next__arrow} onPress={() => linkTo("/Home")}>
+				<Next_arrow />
 			</Pressable>
 		</View>
 	);
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 		width: "100%",
 		height: "100%",
 	},
-	next__button: {
+	next__arrow: {
 		position: "absolute",
 		right: 0,
 		zIndex: 5,

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Defs, G, Path, Rect, ClipPath } from "react-native-svg";
 
-export default function Agat() {
+export default function About_1_2() {
 	return (
 		<Svg
 			width="49"
