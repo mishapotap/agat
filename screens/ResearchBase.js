@@ -5,7 +5,7 @@ import { View, Text, StyleSheet } from "react-native";
 import Orbital from "../assets/svg/Home_1";
 import Roscosmos from "../assets/svg/Home_2";
 // Layout
-import Layout from "../layout/Layout";
+import Layout from "../components/Layout";
 
 const ResearchBase = () => {
 	return (

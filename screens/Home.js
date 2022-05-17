@@ -3,9 +3,10 @@ import { View, Text, StyleSheet } from "react-native";
 // Video
 import { Video } from "expo-av";
 // Layout
-import Layout from "../layout/Layout";
+import Layout from "../components/Layout";
 // Svg
 import { Home_1, Home_2 } from "../constants/svg";
+import { Content } from "../components";
 
 const Home = () => {
 	return (
@@ -18,7 +19,7 @@ const Home = () => {
 				shouldPlay={true}
 			/>
 			<View style={styles.home__bg__layer}></View>
-			<View style={styles.content}>
+			<Content>
 				<Text style={styles.content__text}>
 					Национальный {"\n"} орбитальный исследовательский центр
 				</Text>
@@ -28,7 +29,7 @@ const Home = () => {
 				</View>
 				<Text style={styles.content__title}>Космос</Text>
 				<Text style={styles.content__subtitle}>Пространство инноваций</Text>
-			</View>
+			</Content>
 		</Layout>
 	);
 };
@@ -44,11 +45,6 @@ const styles = StyleSheet.create({
 		...StyleSheet.absoluteFillObject,
 		backgroundColor: "rgba(0, 0, 0, 0.6)",
 		zIndex: -1,
-	},
-	content: {
-		position: "absolute",
-		right: 0,
-		width: "89%",
 	},
 	content__text: {
 		textAlign: "center",

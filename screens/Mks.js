@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 // Layout
-import Layout from "../layout/Layout";
+import Layout from "../components/Layout";
 
 const Mks = () => {
 	return (

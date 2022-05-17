@@ -2,6 +2,13 @@ import { Dimensions } from "react-native";
 const { width, height } = Dimensions.get("window");
 
 export const COLORS = {
+    white: '#ffffff',
+    black: '#000000',
+    blue: '#0066FF',
+    gray: '#BDBDBD',
+    blueText: '#3C70BE',
+    lightBlue: '#427ED9',
+
     // Error
     error: 'rgba(246, 86, 93, 1)',
     error80: 'rgba(246, 86, 93, 0.8)',

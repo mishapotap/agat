@@ -1,31 +1,33 @@
 import React from "react";
-import { View, Image, Text, StyleSheet, Dimensions } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { View, Image, Text, StyleSheet, ScrollView } from "react-native";
 
-// Layout
-import Layout from "../layout/Layout";
+// Components
+import { Content, Layout } from "../components";
 
 // Constants
-import {SIZES} from '../constants';
+import {COLORS, SIZES} from '../constants';
 // Svg
 import { Research_1_circles, Research_1_spaceship } from "../constants/svg";
+import {research_1_background} from '../constants/images';
 
 const Research = () => {
 	return (
 		<Layout>
 			<ScrollView>
-				<View style={{width: '100%', height: SIZES.height}}>
-					<View style={[styles.background, {backgroundColor: '#060F20'}]}/>
-					
-					<View style={styles.content}>
-						{/* <Text style={styles.content__title}>Исследования</Text> */}
-						<View style={{justifyContent: 'center', alignItems: 'center'}}>
-							{/* <Research_1_spaceship/> */}
-							<View style={{ position: 'absolute', top: 0, height: SIZES.height}}><Research_1_circles/></View>
-							<View style={{position: 'absolute', top: SIZES.height/2, left: SIZES.width/2, height: SIZES.height}}><Research_1_spaceship/></View>
-						</View>
-					</View>
+				<View style={{width: SIZES.width, height: SIZES.height, justifyContent: 'flex-end'}}>
+					<Image style={styles.background} source={research_1_background}/>
+					<Content>
+							<Text style={styles.research__title}>Исследования {'\n'}в космосе</Text>
+					</Content>
 				</View>
+				<View style={{width: SIZES.width, height: SIZES.height, justifyContent: 'center', backgroundColor: '#060F20'}}>
+					<Content>
+							<View style={{width:300}}>
+								<Text style={{fontWeight: '600', fontSize: 17, lineHeight: 24, letterSpacing: 0.9, color: COLORS.white}}>Цель развития космических исследований - выход российской науки на ведущие позиции в ключевых направлениях наук о космосе</Text>
+							</View>
+					</Content>
+				</View>
+				
 			</ScrollView>
 		</Layout>
 	);
@@ -33,31 +35,16 @@ const Research = () => {
 
 const styles = StyleSheet.create({
 	background: {
-		...StyleSheet.absoluteFillObject,
 		width: SIZES.width,
 		height: SIZES.height,
-		zIndex: -2,
 	},
-	background_layer: {
-		...StyleSheet.absoluteFillObject,
-		backgroundColor: "rgba(0, 0, 0, 0.6)",
-		zIndex: -1,
-	},
-	content: {
-		position: "absolute",
-		right: 0,
-		width: "89%",
-	},
-	content__title: {
-		textAlign: "center",
-		paddingTop: 30,
-		// text
-		fontWeight: "700",
-		fontSize: 80,
-		lineHeight: 95,
-		letterSpacing: 4,
-		textTransform: "uppercase",
-		color: "#FFFFFF",
+	research__title: {
+		padding: 40,
+		fontWeight: "800",
+		fontSize: 26,
+		lineHeight: 33,
+		letterSpacing: 1,
+		color: COLORS.white,
 	},
 });
 

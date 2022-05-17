@@ -6,7 +6,7 @@ import { View, StyleSheet, Pressable } from "react-native";
 
 // Svg
 import { SIZES } from "../constants";
-import { Navigation_1, Navigation_2, Navigation_3, Navigation_4 } from "../constants/svg";
+import { Navigation_1, Navigation_2, Navigation_3, Navigation_4, Navigation_5 } from "../constants/svg";
 
 const Navigation = ({ navigate }) => {
 	// const navigation = useNavigation();
@@ -14,8 +14,7 @@ const Navigation = ({ navigate }) => {
 		<View style={styles.navigation}>
             <Pressable onPress={() => navigate("Home")}>
 				<View style={styles.navigation__item}>
-					<Navigation_4 />
-                    {/* На главную TODO */}
+					<Navigation_5 />
 				</View>
 			</Pressable>
 			<Pressable onPress={() => navigate("About")}>
