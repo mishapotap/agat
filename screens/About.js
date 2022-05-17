@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, Text, StyleSheet, Image, ScrollView, Pressable } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView, Pressable, ImageBackground } from "react-native";
 import { useLinkTo } from "@react-navigation/native";
 
 // Components
@@ -20,8 +20,7 @@ const About = () => {
 	return (
 		<Layout>
 			<ScrollView>
-				<View style={{width: SIZES.width, height: SIZES.height}}>
-					<Image style={styles.background} source={about_1_background}/>
+				<ImageBackground style={styles.background} source={about_1_background}>
 					<Content>
 						<View style={styles.about}>
 							<View style={styles.about__top}>
@@ -72,10 +71,9 @@ const About = () => {
 							</View>
 						</View>
 					</Content>
-				</View>
-				<View style={{width: SIZES.width, height: SIZES.height, justifyContent: 'center'}}>
-					<Image style={styles.background} source={about_2_background}/>
-					<Content>
+				</ImageBackground>
+				<ImageBackground style={styles.background} source={about_2_background}>
+					<Content centered={true}>
 						<View style={{width: 290, marginRight: 100, alignSelf: 'flex-end'}}>
 							<Text style={{fontWeight: '600', fontSize: 15, lineHeight: 23, letterSpacing: 0.05, color: '#FFFFFF', marginBottom: 35}}>
 							Оператором <Text style={{color: '#3C70BE'}}>по подготовке и проведению</Text> космических исследований и экспериментов является АО «Организация «Агат».
@@ -83,16 +81,13 @@ const About = () => {
 							<Text style={{fontWeight: '400', fontSize: 12, lineHeight: 21, letterSpacing: 0.05, color: "#FFFFFF"}}>По заказу Госкорпорации «Роскосмос», «Организация «Агат» проводит работы по предварительному отбору и подготовке коммерческих целевых работ для проведения космических экспериментов на российском сегменте Международной космической станции.</Text>
 						</View>
 					</Content>
-				</View>
-				<View style={{width: SIZES.width, height: SIZES.height, justifyContent: 'center'}}>
-					<Content>
-						<Text style={{fontWeight: '700', fontSize: 20, lineHeight: 23, textAlign: 'center',letterSpacing: 0.5, color: '#000000'}}>Реализация космических исследований включает</Text>
-						<AboutSlider/>	
-					</Content>
-				</View>
-				<View style={{width: SIZES.width, height: SIZES.height, justifyContent: 'center'}}>
-					<Image style={styles.background} source={about_4_background}/>
-					<Content>
+				</ImageBackground>
+				<Content centered={true}>
+					<Text style={{fontWeight: '700', fontSize: 20, lineHeight: 23, textAlign: 'center',letterSpacing: 0.5, color: '#000000'}}>Реализация космических исследований включает</Text>
+					<AboutSlider/>
+				</Content>
+				<ImageBackground style={styles.background} source={about_4_background}>
+					<Content centered={true}>
 						<View style={{width: 460, alignItems: 'center', alignSelf: 'center'}}>
 							<Home_2/>
 							<Text style={{marginVertical: 25, fontWeight: "800", fontSize: 17, lineHeight: 22, textAlign: 'center',letterSpacing: 0.5, color: '#ffffff'}}>Цель развития отечественных <Text style={{color: '#3C70BE'}}>фундаментальных космических исследований</Text></Text>
@@ -102,10 +97,10 @@ const About = () => {
 									<Text style={{textAlign: 'center', fontWeight: '400', fontSize: 11,lineHeight: 14, letterSpacing: 0.4, color: "rgba(255, 255, 255, 0.65)"}}>Ценности исследований и экспериментов в космосе</Text>
 								</View>
 							</Pressable>
-							<ModalWhite/>
+							{/* <ModalWhite/> */}
 						</View>
 					</Content>
-				</View>
+				</ImageBackground>
 			</ScrollView>
 		</Layout>
 	);
