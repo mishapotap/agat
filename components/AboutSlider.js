@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     active__circle_big: {
         width: 74,
         height: 74,
-        borderRadius: '50%',
+        borderRadius: 50,
         backgroundColor: COLORS.blueText,
         justifyContent: 'center',
         alignItems: 'center',
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     active__circle_small: {
         width: 44,
         height: 44,
-        borderRadius: '50%',
+        borderRadius: 50,
         backgroundColor: COLORS.lightBlue,
         justifyContent: 'center',
         alignItems: 'center',
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     semiactive__circle: {
         width: 25,
         height: 25,
-        borderRadius: '50%',
+        borderRadius: 50,
         backgroundColor: COLORS.gray,
         justifyContent: 'center',
         alignItems: 'center',

@@ -92,12 +92,12 @@ const About = () => {
 							<Home_2/>
 							<Text style={{marginVertical: 25, fontWeight: "800", fontSize: 17, lineHeight: 22, textAlign: 'center',letterSpacing: 0.5, color: '#ffffff'}}>Цель развития отечественных <Text style={{color: '#3C70BE'}}>фундаментальных космических исследований</Text></Text>
 							<Text style={{fontWeight: "400", fontSize: 13, lineHeight: 21, textAlign: 'center',letterSpacing: 0.5, color: "#FFFFFF"}}>выход российской науки на ведущие позиции в ключевых направлениях наук о космосе, а в долгосрочной перспективе - завоевание и удержание позиций одного из мировых лидеров в основных научных дисциплинах о космосе.</Text>
-							<Pressable onPress={() => linkTo("/Research")}>
+							{/* <Pressable onPress={() => linkTo("/Research")}>
 								<View style={{marginTop: 20, justifyContent: 'center', width: 370, height: 33, borderColor: 'rgba(0, 170, 255, 0.47)', borderWidth: 1, borderRadius: 13}}>
 									<Text style={{textAlign: 'center', fontWeight: '400', fontSize: 11,lineHeight: 14, letterSpacing: 0.4, color: "rgba(255, 255, 255, 0.65)"}}>Ценности исследований и экспериментов в космосе</Text>
 								</View>
-							</Pressable>
-							{/* <ModalWhite/> */}
+							</Pressable> */}
+							<ModalWhite/>
 						</View>
 					</Content>
 				</ImageBackground>

@@ -14,6 +14,7 @@ import Navigation_2 from "../assets/svg/Navigation_2"
 import Navigation_3 from "../assets/svg/Navigation_3"
 import Navigation_4 from "../assets/svg/Navigation_4"
 import Navigation_5 from "../assets/svg/Navigation_5"
+import Modal_CloseButton from "../assets/svg/Modal_CloseButton"
 
 export {
     Home_1,
@@ -32,4 +33,5 @@ export {
     Navigation_3,
     Navigation_4,
     Navigation_5,
+    Modal_CloseButton,
 }

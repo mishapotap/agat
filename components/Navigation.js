@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, StyleSheet, Pressable } from "react-native";
 
 // Navigation
@@ -10,31 +10,47 @@ import { Navigation_1, Navigation_2, Navigation_3, Navigation_4, Navigation_5 } 
 
 const Navigation = ({ navigate }) => {
 	// const navigation = useNavigation();
+	const [activeNav, setActiveNav] = useState('one');
 	return (
 		<View style={styles.navigation}>
-            <Pressable onPress={() => navigate("Home")}>
+            <Pressable onPress={() => {
+				setActiveNav('one');
+				navigate("Home");
+			}}>
 				<View style={styles.navigation__item}>
-					<Navigation_5 />
+					<Navigation_5 activeNav={activeNav}/>
 				</View>
 			</Pressable>
-			<Pressable onPress={() => navigate("About")}>
+			<Pressable onPress={() => {
+				setActiveNav('two');
+				navigate("About");
+			}}>
 				<View style={styles.navigation__item}>
-					<Navigation_1 />
+					<Navigation_1 activeNav={activeNav}/>
 				</View>
 			</Pressable>
-			<Pressable onPress={() => navigate("Research")}>
+			<Pressable onPress={() => {
+				setActiveNav('three');
+				navigate("Research");
+			}}>
 				<View style={styles.navigation__item}>
-					<Navigation_2 />
+					<Navigation_2 activeNav={activeNav}/>
 				</View>
 			</Pressable>
-			<Pressable onPress={() => navigate("ResearchBase")}>
+			<Pressable onPress={() => {
+				setActiveNav('four');
+				navigate("ResearchBase");
+			}}>
 				<View style={styles.navigation__item}>
-					<Navigation_3 />
+					<Navigation_3 activeNav={activeNav}/>
 				</View>
 			</Pressable>
-			<Pressable onPress={() => navigate("Mks")}>
+			<Pressable onPress={() => {
+				setActiveNav('five');
+				navigate("Mks");
+			}}>
 				<View style={styles.navigation__item}>
-					<Navigation_4 />
+					<Navigation_4 activeNav={activeNav}/>
 				</View>
 			</Pressable>
 		</View>

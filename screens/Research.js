@@ -8,10 +8,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 // Constants
 import {COLORS, SIZES} from '../constants';
-// Svg
-import { Research_1_circles, Research_1_spaceship } from "../constants/svg";
 import {research_1_background, research_4_background} from '../constants/images';
-import { research_2_icon_1, research_2_icon_2, research_2_icon_3, research_2_icon_4, research_3_icon_1, research_3_icon_2, research_3_icon_3, research_3_icon_4, research_4_starship, research_4_pointer } from "../constants/icons";
+import { research_2_icon_1, research_2_icon_2, research_2_icon_3, research_2_icon_4, research_3_icon_1, research_3_icon_2, research_3_icon_3, research_3_icon_4, research_4_pointer, research_1_icon_1, research_1_icon_2, research_1_icon_3, research_1_icon_4, research_1_icon_5, research_1_icon_6 } from "../constants/icons";
 
 const Research = () => {
 	return (
@@ -19,6 +17,12 @@ const Research = () => {
 			<ScrollView>
 
 				<ImageBackground style={styles.background} source={research_1_background}>
+					<Image style={{position: 'absolute', top: SIZES.height * 0.5, left: SIZES.width * 0.175}} source={research_1_icon_1}/>
+					<Image style={{position: 'absolute', top: SIZES.height * 0.15, left: SIZES.width * 0.21}} source={research_1_icon_2}/>
+					<Image style={{position: 'absolute', top: SIZES.height * 0.35, left: SIZES.width * 0.28}} source={research_1_icon_3}/>
+					<Image style={{position: 'absolute', top: SIZES.height * 0.15, left: SIZES.width * 0.67}} source={research_1_icon_4}/>
+					<Image style={{position: 'absolute', top: SIZES.height * 0.67, left: SIZES.width * 0.69}} source={research_1_icon_5}/>
+					<Image style={{position: 'absolute', top: SIZES.height * 0.45, left: SIZES.width * 0.83}} source={research_1_icon_6}/>
 					<Content>
 						<View style={{height: SIZES.height, justifyContent: 'flex-end'}}>
 							<Text style={styles.research__title}>Исследования {'\n'}в космосе</Text>

@@ -8,6 +8,7 @@ export const COLORS = {
     gray: '#BDBDBD',
     blueText: '#3C70BE',
     lightBlue: '#427ED9',
+    activeNav: '#87CDF8',
 
     // Error
     error: 'rgba(246, 86, 93, 1)',
@@ -112,17 +113,12 @@ export const SIZES = {
 };
 
 export const FONTS = {
-    largeTitle: { fontFamily: "Poppins-Black", fontSize: SIZES.largeTitle },
-    h1: { fontFamily: "Poppins-Bold", fontSize: SIZES.h1, lineHeight: 36 },
-    h2: { fontFamily: "Poppins-Bold", fontSize: SIZES.h2, lineHeight: 30 },
-    h3: { fontFamily: "Poppins-SemiBold", fontSize: SIZES.h3, lineHeight: 22 },
-    h4: { fontFamily: "Poppins-SemiBold", fontSize: SIZES.h4, lineHeight: 22 },
-    h5: { fontFamily: "Poppins-SemiBold", fontSize: SIZES.h5, lineHeight: 22 },
-    body1: { fontFamily: "Poppins-Regular", fontSize: SIZES.body1, lineHeight: 36 },
-    body2: { fontFamily: "Poppins-Regular", fontSize: SIZES.body2, lineHeight: 30 },
-    body3: { fontFamily: "Poppins-Regular", fontSize: SIZES.body3, lineHeight: 22 },
-    body4: { fontFamily: "Poppins-Regular", fontSize: SIZES.body4, lineHeight: 22 },
-    body5: { fontFamily: "Poppins-Regular", fontSize: SIZES.body5, lineHeight: 22 },
+    modalTitle: {fontWeight: '700', fontSize: 20, lineHeight: 30, color: COLORS.black},
+    modalTitleWhite: {fontWeight: '700', fontSize: 23, lineHeight: 30, color: COLORS.white},
+    modalTextBold: {fontWeight: '600', fontSize: 13, lineHeight: 21, color: COLORS.black},
+    modalTextBoldWhite: {fontWeight: '600', fontSize: 13, lineHeight: 21, color: COLORS.white},
+    modalText: {fontWeight: '400', fontSize: 13, lineHeight: 21, letterSpacing: 0.25, color: COLORS.black},
+    modalTextWhite: {fontWeight: '400', fontSize: 13, lineHeight: 21, letterSpacing: 0.25, color: COLORS.white},
 };
 
 export const darkTheme = {
