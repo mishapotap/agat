@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import { View, StyleSheet, Pressable } from "react-native";
+import { SIZES } from "../constants";
 
 // Navigation
 // import { useNavigation } from '@react-navigation/native';
 
 // Svg
-import { SIZES } from "../constants";
 import { Navigation_1, Navigation_2, Navigation_3, Navigation_4, Navigation_5 } from "../constants/svg";
 
 const Navigation = ({ navigate }) => {

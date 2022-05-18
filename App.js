@@ -9,13 +9,14 @@ import Navigation from "./components/Navigation";
 
 // Pages
 import { Home, About, Research, ResearchBase, Mks } from "./screens";
+import { Layout } from "./components";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
 	const ref = useNavigationContainerRef();
 	return (
-		<>
+		<Layout>
 			<NavigationContainer ref={ref}>
 				<Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={"Home"}>
 					<Stack.Screen name="Home" component={Home} />
@@ -26,6 +27,6 @@ export default function App() {
 				</Stack.Navigator>
 			</NavigationContainer>
 			<Navigation navigate={ref.navigate} />
-		</>
+		</Layout>
 	);
 }

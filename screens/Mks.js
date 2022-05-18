@@ -3,49 +3,36 @@ import { View, Text, StyleSheet } from "react-native";
 
 // Layout
 import Layout from "../components/Layout";
+import { COLORS, SIZES } from "../constants";
 
 const Mks = () => {
 	return (
 		<Layout>
-            <View style={styles.home__bg__layer}></View>
             <View style={styles.content}>
-                <Text style={styles.content__title}>РС МКС</Text>
-            </View>
+				<Text style={styles.title}>РС МКС</Text>
+			</View>
         </Layout>
 	);
 };
 
 const styles = StyleSheet.create({
-	home__bg: {
-		...StyleSheet.absoluteFillObject,
-		width: "100%",
-		height: "100%",
-		zIndex: -2,
-	},
-	home__bg__layer: {
-		...StyleSheet.absoluteFillObject,
-		backgroundColor: "rgba(0, 0, 0, 0.6)",
-		zIndex: -1,
-	},
 	content: {
-		position: "absolute",
-		right: 0,
-		width: "89%",
-		// marginTop: 0,
-		// marginRight: 'auto',
-		// marginBottom: 0,
-		// marginLeft: 'auto',
+		paddingLeft: SIZES.width * 0.11,
+		height: SIZES.height,
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
-	content__title: {
+	title: {
+		backgroundColor: 'red',
 		textAlign: "center",
-		paddingTop: 30,
 		// text
 		fontWeight: "700",
 		fontSize: 80,
 		lineHeight: 95,
 		letterSpacing: 4,
 		textTransform: "uppercase",
-		color: "#FFFFFF",
+		color: COLORS.white,
 	},
 });
 

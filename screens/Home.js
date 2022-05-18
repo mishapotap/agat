@@ -4,66 +4,63 @@ import { View, Text, StyleSheet } from "react-native";
 import { Video } from "expo-av";
 // Layout
 import Layout from "../components/Layout";
-// Svg
+// Constants
 import { Home_1, Home_2 } from "../constants/svg";
-import { Content } from "../components";
+import { COLORS, SIZES } from "../constants";
 
 const Home = () => {
 	return (
 		<Layout>
 			<Video
-				style={styles.home__bg}
+				style={styles.background}
 				source={require("../assets/video/main.mp4")}
-				resizeMode="stretch"
+				resizeMode="cover"
 				isLooping={true}
 				shouldPlay={true}
 			/>
-			<View style={styles.home__bg__layer}></View>
-			<Content>
-				<Text style={styles.content__text}>
+			<View style={styles.content}>
+				<Text style={styles.text}>
 					Национальный {"\n"} орбитальный исследовательский центр
 				</Text>
-				<View style={styles.content_logos}>
+				<View style={styles.logos}>
 					<Home_1 />
 					<Home_2 />
 				</View>
-				<Text style={styles.content__title}>Космос</Text>
-				<Text style={styles.content__subtitle}>Пространство инноваций</Text>
-			</Content>
+				<Text style={styles.title}>Космос</Text>
+				<Text style={styles.subtitle}>Пространство инноваций</Text>
+			</View>
 		</Layout>
 	);
 };
 
 const styles = StyleSheet.create({
-	home__bg: {
-		...StyleSheet.absoluteFillObject,
-		width: "100%",
-		height: "100%",
-		zIndex: -2,
+	content: {
+		paddingLeft: SIZES.width * 0.11,
+		flex: 1,
+		alignItems: 'center',
 	},
-	home__bg__layer: {
-		...StyleSheet.absoluteFillObject,
-		backgroundColor: "rgba(0, 0, 0, 0.6)",
-		zIndex: -1,
+	background: {
+		position: "absolute",
+		width: SIZES.width,
+		height: SIZES.height,
 	},
-	content__text: {
+	text: {
 		textAlign: "center",
 		paddingVertical: 20,
-
 		// text
 		fontWeight: "600",
 		fontSize: 10,
 		lineHeight: 15,
 		textTransform: "uppercase",
-		color: "#FFFFFF",
+		color: COLORS.white,
 	},
-	content_logos: {
-		flexDirection: "row",
+	logos: {
 		width: 300,
-		alignSelf: "center",
+		flexDirection: "row",
 		justifyContent: "space-between",
+		alignSelf: "center",
 	},
-	content__title: {
+	title: {
 		textAlign: "center",
 		paddingTop: 30,
 		// text
@@ -72,9 +69,9 @@ const styles = StyleSheet.create({
 		lineHeight: 95,
 		letterSpacing: 4,
 		textTransform: "uppercase",
-		color: "#FFFFFF",
+		color: COLORS.white,
 	},
-	content__subtitle: {
+	subtitle: {
 		width: 400,
 		alignSelf: "center",
 		textAlign: "right",
@@ -84,7 +81,7 @@ const styles = StyleSheet.create({
 		lineHeight: 17,
 		letterSpacing: 2,
 		textTransform: "uppercase",
-		color: "#FFFFFF",
+		color: COLORS.white,
 	},
 });
 

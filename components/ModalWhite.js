@@ -9,6 +9,7 @@ const ModalWhite = () => {
 	return (
 		<>
 			<Modal
+				// style={{width: SIZES.width, height: SIZES.height}}
 				animationType="slide"
 				transparent={true}
 				visible={modalVisible}
@@ -28,8 +29,8 @@ const ModalWhite = () => {
 									</View>
 								</Pressable>
 							</View>
-							<View style={{width: '100%', height: StyleSheet.hairlineWidth, backgroundColor: 'rgba(0, 0, 0, 0.15)', marginBottom: 24}}></View>
-							<ScrollView style={{}}>
+							<View style={{width: '100%', height: StyleSheet.hairlineWidth, backgroundColor: 'rgba(0, 0, 0, 0.15)'}}></View>
+							<ScrollView>
 								<View style={{alignItems: 'center'}}>
 									<Text style={[FONTS.modalTextBold, {marginBottom: 24, textAlign: 'left'}]}>Космические исследования и эксперименты проводятся{"\n"}на Международной космической станции (МКС).</Text>
 									<Text style={[FONTS.modalText, {marginBottom: 24, width: 500}]}>МКС представляет собой многоцелевую исследовательскую лабораторию в которой проводится широкий спектр научно-прикладных исследований и экспериментов различных направлений, отрабатываются новые технологии и испытываются новые материалы, исследуются особенности физических и биологических процессов, проходят наблюдения за земным покровом и атмосферными явлениями, реализуются различные образовательные и популяризаторские проекты.</Text>
