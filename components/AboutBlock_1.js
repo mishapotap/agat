@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
         paddingLeft: SIZES.width * 0.11,
         height: SIZES.height,
         flex: 1,
-        // justifyContent: 'center',
         alignItems: 'center',
     },
     container: {

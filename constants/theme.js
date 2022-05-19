@@ -9,6 +9,7 @@ export const COLORS = {
     blueText: '#3C70BE',
     lightBlue: '#427ED9',
     activeNav: '#87CDF8',
+    researchBg: '#060F20',
 
     // Error
     error: 'rgba(246, 86, 93, 1)',
