@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {View, Text, StyleSheet, Pressable} from 'react-native'
 import { COLORS, SIZES } from '../constants';
-import { Home_2 } from "../constants/svg";
-import About_Modal_4 from "./About_Modal_4";
+import { Home_2 } from "../assets/svg";
+import {About4_Modal_1} from "./modal";
 
 const AboutBlock_4 = () => {
     const [modalAbout4, setModalAbout4] = useState(false);
@@ -17,7 +17,7 @@ const AboutBlock_4 = () => {
                         <Text style={styles.buttonText}>Ценности исследований и экспериментов в космосе</Text>
                     </View>
 			    </Pressable>
-                <About_Modal_4 modalVisible={modalAbout4} setModalVisible={setModalAbout4}/>
+                <About4_Modal_1 modalVisible={modalAbout4} setModalVisible={setModalAbout4}/>
             </View>
         </View>
     )

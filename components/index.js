@@ -5,7 +5,6 @@ import AboutBlock_1 from "./AboutBlock_1";
 import AboutBlock_2 from "./AboutBlock_2";
 import AboutBlock_3 from "./AboutBlock_3";
 import AboutBlock_4 from "./AboutBlock_4";
-// import About_Modal_4 from "./About_Modal_4";
 import ResearchBlock_1 from "./ResearchBlock_1";
 import ResearchBlock_2 from "./ResearchBlock_2";
 import ResearchBlock_3 from "./ResearchBlock_3";
@@ -19,7 +18,6 @@ export {
     AboutBlock_2,
     AboutBlock_3,
     AboutBlock_4,
-    // About_Modal_4,
     ResearchBlock_1,
     ResearchBlock_2,
     ResearchBlock_3,

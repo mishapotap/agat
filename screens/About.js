@@ -12,7 +12,8 @@ const About = () => {
 	// const linkTo = useLinkTo();
 	return (
 		<Layout>
-			<ScrollView style={{width: SIZES.width, height: SIZES.height}}>
+			{/* <ScrollView showsVerticalScrollIndicator={false} style={{width: SIZES.width, height: SIZES.height}}> */}
+			<ScrollView showsVerticalScrollIndicator={false}>
 				<ImageBackground style={styles.background} source={about_1_background}>
 					<AboutBlock_1/>
 				</ImageBackground>

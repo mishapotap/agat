@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { Home_1, Home_2 } from "../constants/svg";
+import { Home_1, Home_2 } from "../assets/svg";
 import { COLORS, SIZES } from "../constants";
 
 const HomeBlock_1 = () => {

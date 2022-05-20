@@ -7,7 +7,7 @@ import {research_1_background, research_4_background} from '../constants/images'
 const Research = () => {
 	return (
 		<Layout>
-			<ScrollView>
+			<ScrollView showsVerticalScrollIndicator={false}>
 				<ImageBackground style={styles.background} source={research_1_background}>
 					<ResearchBlock_1/>
 				</ImageBackground>

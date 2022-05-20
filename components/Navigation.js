@@ -6,7 +6,7 @@ import { SIZES } from "../constants";
 // import { useNavigation } from '@react-navigation/native';
 
 // Svg
-import { Navigation_1, Navigation_2, Navigation_3, Navigation_4, Navigation_5 } from "../constants/svg";
+import { Navigation_1, Navigation_2, Navigation_3, Navigation_4, Navigation_5 } from "../assets/svg";
 
 const Navigation = ({ navigate }) => {
 	// const navigation = useNavigation();

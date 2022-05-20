@@ -120,6 +120,8 @@ export const FONTS = {
     modalTextBoldWhite: {fontWeight: '600', fontSize: 13, lineHeight: 21, color: COLORS.white},
     modalText: {fontWeight: '400', fontSize: 13, lineHeight: 21, letterSpacing: 0.25, color: COLORS.black},
     modalTextWhite: {fontWeight: '400', fontSize: 13, lineHeight: 21, letterSpacing: 0.25, color: COLORS.white},
+    modalList: {fontWeight: '400', fontSize: 13, lineHeight: 21, letterSpacing: 0.25, color: COLORS.black},
+    modalListWhite: {fontWeight: '400', fontSize: 13, lineHeight: 21, letterSpacing: 0.25, color: COLORS.white},
 };
 
 export const darkTheme = {

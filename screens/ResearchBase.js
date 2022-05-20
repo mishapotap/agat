@@ -1,7 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-
-// Layout
 import Layout from "../components/Layout";
 import { COLORS, SIZES } from "../constants";
 

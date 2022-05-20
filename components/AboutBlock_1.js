@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {View, Text, StyleSheet, Pressable} from 'react-native'
 import { COLORS, SIZES } from '../constants';
-import { About_1_arrow, About_1_1, About_1_2, About_1_3, About_1_4} from "../constants/svg";
+import { About_1_arrow, About_1_1, About_1_2, About_1_3, About_1_4} from "../assets/svg";
 
 const AboutBlock_1 = () => {
     const [activeTab, setActiveTab] = useState('first');

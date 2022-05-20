@@ -7,7 +7,7 @@ const AboutBlock_3 = () => {
 	return (
 		<View style={styles.content}>
 			<View style={styles.container}>
-			    <Text style={styles.title}>Реализация {'\n'}космических исследований включает</Text>
+			    <Text style={styles.title}>Реализация космических исследований включает</Text>
                 <Pressable style={styles.pressable} onPress={() => setActiveSlide('one')}>
                     { activeSlide === 'one' ? 
                     <View style={styles.active__container}>
