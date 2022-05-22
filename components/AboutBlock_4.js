@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {View, Text, StyleSheet, Pressable} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 import { COLORS, SIZES } from '../constants';
 import { Home_2 } from "../assets/svg";
 import {About4_Modal_1} from "./modal";
@@ -12,11 +12,11 @@ const AboutBlock_4 = () => {
                 <Home_2/>
                 <Text style={styles.title}>Цель развития отечественных <Text style={{color: COLORS.blueText}}>фундаментальных космических исследований</Text></Text>
                 <Text style={styles.text}>выход российской науки на ведущие позиции в ключевых направлениях наук о космосе, а в долгосрочной перспективе - завоевание и удержание позиций одного из мировых лидеров в основных научных дисциплинах о космосе.</Text>
-                <Pressable onPress={() => setModalAbout4(true)}>
+                <TouchableOpacity onPress={() => setModalAbout4(true)}>
                     <View style={styles.button}>
                         <Text style={styles.buttonText}>Ценности исследований и экспериментов в космосе</Text>
                     </View>
-			    </Pressable>
+			    </TouchableOpacity>
                 <About4_Modal_1 modalVisible={modalAbout4} setModalVisible={setModalAbout4}/>
             </View>
         </View>

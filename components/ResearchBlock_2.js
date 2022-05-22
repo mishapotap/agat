@@ -1,37 +1,37 @@
 import React from "react";
-import { View, Image, Text, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import {COLORS, SIZES} from '../constants';
-import { research_2_icon_1, research_2_icon_2, research_2_icon_3, research_2_icon_4 } from "../constants/icons";
+import { Research_2_icon1, Research_2_icon2, Research_2_icon3, Research_2_icon4  } from "../assets/svg";
 
 const ResearchBlock_2 = () => {
     return (
         <View style={styles.content}>
             <Text style={styles.text}>Цель развития космических исследований - выход российской науки на ведущие позиции в ключевых <Text style={{color: COLORS.blueText}}>направлениях наук о космосе</Text></Text>
             <View style={styles.items}>
-                <Pressable>
+                <TouchableOpacity>
                     <View style={styles.item}>
-                        <Image style={styles.image} source={research_2_icon_1}/>
+                        <View style={{margin: 13}}><Research_2_icon1/></View>
                         <Text style={styles.itemText}>Научно-{"\n"}фундаментальные</Text>
                     </View>
-                </Pressable>
-                <Pressable>
+                </TouchableOpacity>
+                <TouchableOpacity>
                     <View style={styles.item}>
-                        <Image style={styles.image} source={research_2_icon_2}/>
+                    <View style={{margin: 13}}><Research_2_icon2/></View>
                         <Text style={styles.itemText}>Технологические</Text>
                     </View>
-                </Pressable>
-                <Pressable>
+                </TouchableOpacity>
+                <TouchableOpacity>
                     <View style={styles.item}>
-                        <Image style={styles.image} source={research_2_icon_3}/>
+                    <View style={{margin: 13}}><Research_2_icon3/></View>
                         <Text style={styles.itemText}>Прикладные</Text>
                     </View>
-                </Pressable>
-                <Pressable>
+                </TouchableOpacity>
+                <TouchableOpacity>
                     <View style={styles.item}>
-                        <Image style={styles.image} source={research_2_icon_4}/>
+                        <View style={{margin: 13}}><Research_2_icon4/></View>
                         <Text style={styles.itemText}>Образовательные</Text>
                     </View>
-                </Pressable>
+                </TouchableOpacity>
             </View>
         </View>
     )
@@ -64,9 +64,6 @@ const styles = StyleSheet.create({
         borderRadius: 16,
         backgroundColor: 'rgba(68, 68, 68, 0.23)',
         margin: 4,
-    },
-    image: {
-        margin: 13,
     },
     itemText: {
         marginTop: 5,

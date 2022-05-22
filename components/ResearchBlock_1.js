@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import {COLORS, SIZES} from '../constants';
 import {Research1_Modal_1, Research1_Modal_2, Research1_Modal_3, Research1_Modal_4, Research1_Modal_5, Research1_Modal_6} from "./modal";
-import { Research_1_Icon1, Research_1_Icon2, Research_1_Icon3, Research_1_Icon4, Research_1_Icon5, Research_1_Icon6 } from "../assets/svg";
+import { Research_1_Icon1, Research_1_Icon1_big, Research_1_Icon2, Research_1_Icon2_big, Research_1_Icon3, Research_1_Icon3_big, Research_1_Icon4, Research_1_Icon4_big, Research_1_Icon5, Research_1_Icon5_big, Research_1_Icon6, Research_1_Icon6_big } from "../assets/svg";
 
 const ResearchBlock_1 = () => {
     const [modalResearch1, setModalResearch1] = useState(false);
@@ -19,36 +19,36 @@ const ResearchBlock_1 = () => {
             <Research1_Modal_4 modalVisible={modalResearch4} setModalVisible={setModalResearch4}/>
             <Research1_Modal_5 modalVisible={modalResearch5} setModalVisible={setModalResearch5}/>
             <Research1_Modal_6 modalVisible={modalResearch6} setModalVisible={setModalResearch6}/>
-            <Pressable onPress={() => setModalResearch1(true)}>
-                <View style={{position: 'absolute', top: SIZES.height * 0.5, left: SIZES.width * 0.07}}>
-                    <Research_1_Icon1 />
+            <TouchableOpacity onPress={() => setModalResearch1(true)}>
+                <View style={{position: 'absolute', top: SIZES.height * 0.5, left: SIZES.width * 0.055}}>
+                    <Research_1_Icon1_big />
                 </View>
-            </Pressable>
-            <Pressable onPress={() => setModalResearch2(true)}>
-                <View style={{position: 'absolute', top: SIZES.height * 0.15, left: SIZES.width * 0.1}}>
-                    <Research_1_Icon2 />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => setModalResearch2(true)}>
+                <View style={{position: 'absolute', top: SIZES.height * 0.15, left: SIZES.width * 0.09}}>
+                    <Research_1_Icon2_big />
                 </View>
-            </Pressable>
-            <Pressable onPress={() => setModalResearch3(true)}>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => setModalResearch3(true)}>
                 <View style={{position: 'absolute', top: SIZES.height * 0.35, left: SIZES.width * 0.175}}>
-                    <Research_1_Icon3 />
+                    <Research_1_Icon3_big />
                 </View>
-            </Pressable>
-            <Pressable onPress={() => setModalResearch4(true)}>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => setModalResearch4(true)}>
                 <View style={{position: 'absolute', top: SIZES.height * 0.15, left: SIZES.width * 0.56}}>
-                    <Research_1_Icon4 />
+                    <Research_1_Icon4_big />
                 </View>
-            </Pressable>
-            <Pressable onPress={() => setModalResearch5(true)}>
-                <View style={{position: 'absolute', top: SIZES.height * 0.67, left: SIZES.width * 0.59}}>
-                    <Research_1_Icon5 />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => setModalResearch5(true)}>
+                <View style={{position: 'absolute', top: SIZES.height * 0.67, left: SIZES.width * 0.58}}>
+                    <Research_1_Icon5_big />
                 </View>
-            </Pressable>
-            <Pressable onPress={() => setModalResearch6(true)}>
-                <View style={{position: 'absolute', top: SIZES.height * 0.45, left: SIZES.width * 0.725}}>
-                    <Research_1_Icon6 />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => setModalResearch6(true)}>
+                <View style={{position: 'absolute', top: SIZES.height * 0.45, left: SIZES.width * 0.715}}>
+                    <Research_1_Icon6_big />
                 </View>
-            </Pressable>
+            </TouchableOpacity>
             <Text style={styles.title}>Исследования{'\n'}в космосе</Text>
         </View>
     )

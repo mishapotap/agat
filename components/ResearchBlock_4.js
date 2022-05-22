@@ -1,16 +1,16 @@
 import React from "react";
-import { View, Image, Text, StyleSheet, Pressable } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { Research_4_icon } from "../assets/svg";
 import {COLORS, SIZES} from '../constants';
-import { research_4_pointer } from "../constants/icons";
 
 const ResearchBlock_4 = () => {
     return (
         <View style={styles.content}>
                 <View style={styles.block}>
                     <Text style={styles.text}>Космические исследования и эксперименты проводятся на Российском сегменте Международной космической станции</Text>
-                    <Pressable>
-                        <Image source={research_4_pointer}/>
-                    </Pressable>
+                    <TouchableOpacity>
+                        <Research_4_icon/>
+                    </TouchableOpacity>
                 </View>
         </View>
     )

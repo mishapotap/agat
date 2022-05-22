@@ -21,10 +21,19 @@ import Research_1_Icon3_big from "./Research_1_Icon3_big"
 import Research_1_Icon4_big from "./Research_1_Icon4_big"
 import Research_1_Icon5_big from "./Research_1_Icon5_big"
 import Research_1_Icon6_big from "./Research_1_Icon6_big"
+import Research_2_icon1 from "./Research_2_icon1"
+import Research_2_icon2 from "./Research_2_icon2"
+import Research_2_icon3 from "./Research_2_icon3"
+import Research_2_icon4 from "./Research_2_icon4"
+import Research_3_icon1 from "./Research_3_icon1"
+import Research_3_icon2 from "./Research_3_icon2"
+import Research_3_icon3 from "./Research_3_icon3"
+import Research_3_icon4 from "./Research_3_icon4"
 import Research_3_1 from "./Research_3_1"
 import Research_3_2 from "./Research_3_2"
 import Research_3_3 from "./Research_3_3"
 import Research_3_4 from "./Research_3_4"
+import Research_4_icon from "./Research_4_icon"
 import Navigation_1 from "./Navigation_1"
 import Navigation_2 from "./Navigation_2"
 import Navigation_3 from "./Navigation_3"
@@ -56,10 +65,19 @@ export {
     Research_1_Icon4_big,
     Research_1_Icon5_big,
     Research_1_Icon6_big,
+    Research_2_icon1,
+    Research_2_icon2,
+    Research_2_icon3,
+    Research_2_icon4,
+    Research_3_icon1,
+    Research_3_icon2,
+    Research_3_icon3,
+    Research_3_icon4,
     Research_3_1,
     Research_3_2,
     Research_3_3,
     Research_3_4,
+    Research_4_icon,
     Navigation_1,
     Navigation_2,
     Navigation_3,
