@@ -1,36 +1,25 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import Layout from "../components/Layout";
+import { View, Text, StyleSheet, ScrollView, ImageBackground } from "react-native";
 import { COLORS, SIZES } from "../constants";
+import {ResearchBase_Block_1, Layout} from "../components";
+import { researchBase_1_background } from "../constants/images";
 
 const ResearchBase = () => {
 	return (
 		<Layout>
-            <View style={styles.content}>
-				<Text style={styles.title}>База исследований</Text>
-			</View>
-        </Layout>
+			<ScrollView showsVerticalScrollIndicator={false}>
+				<ImageBackground style={styles.background} source={researchBase_1_background}>
+					<ResearchBase_Block_1/>
+				</ImageBackground>
+			</ScrollView>
+		</Layout>
 	);
 };
 
 const styles = StyleSheet.create({
-	content: {
-		paddingLeft: SIZES.width * 0.11,
+	background: {
+		width: SIZES.width,
 		height: SIZES.height,
-		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	title: {
-		backgroundColor: 'red',
-		textAlign: "center",
-		// text
-		fontWeight: "700",
-		fontSize: 80,
-		lineHeight: 95,
-		letterSpacing: 4,
-		textTransform: "uppercase",
-		color: COLORS.white,
 	},
 });
 

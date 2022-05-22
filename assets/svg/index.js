@@ -40,6 +40,7 @@ import Navigation_3 from "./Navigation_3"
 import Navigation_4 from "./Navigation_4"
 import Navigation_5 from "./Navigation_5"
 import Modal_CloseButton from "./Modal_CloseButton"
+import ResearchBase_Filter from "./ResearchBase_Filter"
 
 export {
     Home_1,
@@ -84,4 +85,5 @@ export {
     Navigation_4,
     Navigation_5,
     Modal_CloseButton,
+    ResearchBase_Filter,
 }
