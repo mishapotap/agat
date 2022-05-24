@@ -7,7 +7,6 @@ const ResearchBase_Block_2 = () => {
 
     const navigation = useNavigation();
     const [items, setItems] = useState([]);
-    // const [detailInfo, setDetailInfo] = useState([]);
     const baseUrl = 'https://agat.avt.promo';
 
     useEffect(() => {
@@ -23,22 +22,6 @@ const ResearchBase_Block_2 = () => {
         }, [])
         // При клике в массив зависимостей дописать то что обновляется
 
-    // const GetDetailInfo = (DETAIL_PAGE_URL) => {
-    //     fetch(`${baseUrl}${DETAIL_PAGE_URL}`)
-    //     .then(res => res.json())
-    //     .then((result) => {
-    //         setDetailInfo(result.ITEMS);
-    //     },
-    //     (error) => {
-    //         alert(JSON.stringify(error));
-    //         }
-    //     )
-    // }
-    // const goToExperiment = (item) => {
-    //     GetDetailInfo(item.DETAIL_PAGE_URL);
-    //     navigation.navigate('Experiment', { detailInfo })
-    // }
-        // console.log(items[0]?.DETAIL_PAGE_URL)
     return (
         <View style={styles.content}>
             {items.map(item => (

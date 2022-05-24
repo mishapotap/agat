@@ -24,7 +24,7 @@ const Research1_Modal_6 = ({ modalVisible, setModalVisible }) => {
 						<View style={{ alignSelf: "center" }}>
 							<Research_1_Icon6_big />
 						</View>
-						<Text style={flattenStyles.title}>Исследования Земли из космоса</Text>
+						<Text style={flattenStyles.title}>Исследования земли и космоса</Text>
 					</View>
 					<View
 						style={{

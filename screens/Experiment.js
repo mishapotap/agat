@@ -12,6 +12,7 @@ const Experiment = ({route, navigation}) => {
     const {url} = route.params;
     const [item, setItem] = useState([]);
     const [modalInfo, setModalInfo] = useState(false);
+    const [modal, setModal] = useState({});
 
     useEffect(() => {
         fetch(`${baseUrl}${url}`)
@@ -54,7 +55,7 @@ const Experiment = ({route, navigation}) => {
 
 				<View style={{width: SIZES.width, height: SIZES.height, backgroundColor: COLORS.white}}>
                     <View style={styles.contentTwo}>
-                        <Experiment_Modal modalVisible={modalInfo} setModalVisible={setModalInfo} />
+                        <Experiment_Modal modalVisible={modalInfo} setModalVisible={setModalInfo} data={modal}/>
                         <View style={styles.buttons}>
                             <TouchableOpacity disabled onPress={() => navigation.goBack()}>
                                 <Modal_PlayButton />
@@ -75,7 +76,10 @@ const Experiment = ({route, navigation}) => {
                             </View>
                             <View style={styles.modalContainer}>
                                 {item?.MODALS?.map((modal) => (
-                                    <TouchableOpacity key={modal.name} onPress={() => setModalInfo(!modalInfo)}>
+                                    <TouchableOpacity key={modal.name} onPress={() => {
+                                        setModal(modal);
+                                        setModalInfo(!modalInfo)
+                                    }}>
                                         <View style={styles.modalButton}>
                                             <Text style={styles.modalButtonName}>{modal.name}</Text>
                                         </View>
