@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
         // text
         fontWeight: '700',
         fontSize: 11,
-        lineHeight: 21,
+        lineHeight: 18,
         letterSpacing: 0.3,
         color: COLORS.black
     },

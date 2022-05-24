@@ -3,7 +3,18 @@ import { Modal, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { COLORS, FONTS, SIZES, dummyData } from "../../constants";
 import { Modal_BackButton, Modal_CheckBox, Modal_CheckBox_disabled } from "../../assets/svg";
 
-const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible }) => {
+const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFilteredItems }) => {
+	const filterArray = (filter) => {
+		setFilteredItems(
+			items.filter((item) => {
+				// console.log(item?.PROPERTIES?.spisoknapravisled);
+				// console.log(filter);
+				// console.log(item?.PROPERTIES?.spisoknapravisled === filter);
+				return item?.PROPERTIES?.spisoknapravisled === filter;
+			})
+		);
+	};
+
 	return (
 		<Modal
 			animationType="slide"
@@ -15,38 +26,26 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible }) => {
 			}}
 		>
 			<View style={styles.centeredView}>
-				<TouchableOpacity
-					style={styles.close}
-					onPress={() => setModalVisible(!modalVisible)}
-				>
+				<TouchableOpacity style={styles.close} onPress={() => setModalVisible(!modalVisible)}>
 					<Modal_BackButton />
 				</TouchableOpacity>
 				<View style={styles.container}>
 					<TouchableOpacity>
 						<View style={styles.item}>
-							<View
-								style={{
-									width: 53,
-									height: 53,
-									justifyContent: "center",
-									alignItems: "center",
-								}}
-							>
+							<View style={styles.topBox}>
 								<Modal_CheckBox />
 							</View>
 							<Text style={styles.text}>Текущие</Text>
 						</View>
 					</TouchableOpacity>
-					<TouchableOpacity>
+					<TouchableOpacity
+						onPress={() => {
+							setFilteredItems([]);
+							setModalVisible(!modalVisible);
+						}}
+					>
 						<View style={styles.item}>
-							<View
-								style={{
-									width: 53,
-									height: 53,
-									justifyContent: "center",
-									alignItems: "center",
-								}}
-							>
+							<View style={styles.topBox}>
 								<Modal_CheckBox_disabled />
 							</View>
 							<Text style={styles.text}>Завершенные</Text>
@@ -54,11 +53,17 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible }) => {
 					</TouchableOpacity>
 					<View style={styles.hr}></View>
 
-					{dummyData.filters.map((item) => (
-						<TouchableOpacity key={item.id}>
+					{dummyData.filters.map((filter) => (
+						<TouchableOpacity
+							key={filter.id}
+							onPress={() => {
+								filterArray(filter.name);
+								setModalVisible(!modalVisible);
+							}}
+						>
 							<View style={styles.item}>
-								<View style={styles.box}>{item.icon}</View>
-								<Text style={styles.text}>{item.name}</Text>
+								<View style={styles.box}>{filter.icon}</View>
+								<Text style={styles.text}>{filter.name}</Text>
 							</View>
 						</TouchableOpacity>
 					))}
@@ -99,6 +104,12 @@ const styles = StyleSheet.create({
 		width: "100%",
 		backgroundColor: COLORS.white,
 		marginVertical: 15,
+	},
+	topBox: {
+		width: 53,
+		height: 53,
+		justifyContent: "center",
+		alignItems: "center",
 	},
 	box: {
 		width: 53,

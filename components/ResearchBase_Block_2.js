@@ -1,30 +1,12 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import {COLORS, SIZES} from '../constants';
-import { useNavigation } from '@react-navigation/native';
 
-const ResearchBase_Block_2 = () => {
-
-    const navigation = useNavigation();
-    const [items, setItems] = useState([]);
-    const baseUrl = 'https://agat.avt.promo';
-
-    useEffect(() => {
-        fetch(`${baseUrl}/api/baza-issledovaniy/`)
-            .then(res => res.json())
-            .then((result) => {
-                setItems(result.ITEMS)
-            },
-            (error) => {
-                alert(JSON.stringify(error));
-                }
-            )
-        }, [])
-        // При клике в массив зависимостей дописать то что обновляется
-
+const ResearchBase_Block_2 = ({navigation, baseUrl, filteredItems}) => {
+    
     return (
         <View style={styles.content}>
-            {items.map(item => (
+            {filteredItems.map(item => (
                 <TouchableOpacity key={item.ID} style={styles.item} onPress={() => navigation.navigate('Experiment', {url: item.DETAIL_PAGE_URL})}>
                     <Image style={styles.image} source={{uri:`${baseUrl}${item.PREVIEW_PICTURE}`}}/>
                     <View style={styles.filter}>

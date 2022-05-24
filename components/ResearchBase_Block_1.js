@@ -4,11 +4,13 @@ import { ResearchBase_Filter } from "../assets/svg";
 import {COLORS, SIZES} from '../constants';
 import {ResearchBase_Modal_1} from "./modal";
 
-const ResearchBase_Block_1 = () => {
+const ResearchBase_Block_1 = ({items, setFilteredItems}) => {
+
     const [modalSwitch, setModalSwitch] = useState(false);
+
     return (
         <View style={styles.content}>
-            <ResearchBase_Modal_1 modalVisible={modalSwitch} setModalVisible={setModalSwitch}/>
+            <ResearchBase_Modal_1 modalVisible={modalSwitch} setModalVisible={setModalSwitch} items={items} setFilteredItems={setFilteredItems}/>
             <View style={styles.switch}>
                 <Text style={styles.text}>Выбор направления</Text>
                 <TouchableOpacity onPress={() => setModalSwitch(true)}>

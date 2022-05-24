@@ -9,7 +9,7 @@ const filters = [
     },
     {
         id: 2,
-        name: 'Исследования земли и космоса',
+        name: 'Исследование земли и космоса',
         icon: <ResearchBase_Icon_2/>,
     },
     {
