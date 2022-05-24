@@ -13,7 +13,7 @@ import { FONTS } from "../../constants";
 import { about_4_modal } from "../../constants/images";
 import { Modal_CloseButton } from "../../assets/svg";
 
-const Research3_Modal_2 = ({ modalVisible, setModalVisible }) => {
+const Experiment_Modal = ({ modalVisible, setModalVisible }) => {
 	return (
 		<Modal
 			animationType="slide"
@@ -129,4 +129,4 @@ const flattenStyles = StyleSheet.flatten({
 	paragraph: [FONTS.modalText, { marginBottom: 24 }],
 });
 
-export default Research3_Modal_2;
+export default Experiment_Modal;

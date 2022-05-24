@@ -10,6 +10,7 @@ import ResearchBlock_2 from "./ResearchBlock_2";
 import ResearchBlock_3 from "./ResearchBlock_3";
 import ResearchBlock_4 from "./ResearchBlock_4";
 import ResearchBase_Block_1 from "./ResearchBase_Block_1";
+import ResearchBase_Block_2 from "./ResearchBase_Block_2";
 
 export {
     Layout,
@@ -24,4 +25,5 @@ export {
     ResearchBlock_3,
     ResearchBlock_4,
     ResearchBase_Block_1,
+    ResearchBase_Block_2,
 }

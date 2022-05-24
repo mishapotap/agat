@@ -10,7 +10,7 @@ const About4_Modal_1 = ({modalVisible, setModalVisible}) => {
         animationType="slide"
         transparent={false}
         visible={modalVisible}
-        supportedOrientations={['landscape', 'landscape-left', 'landscape-right']}
+        supportedOrientations={["landscape"]}
         onRequestClose={() => {
             setModalVisible(!modalVisible);
         }}>	

@@ -3,6 +3,7 @@ import About from "./About";
 import Research from "./Research";
 import ResearchBase from "./ResearchBase";
 import Mks from "./Mks";
+import Experiment from "./Experiment";
 
 export {
     Home,
@@ -10,4 +11,5 @@ export {
     Research,
     ResearchBase,
     Mks,
+    Experiment,
 }

@@ -1,58 +1,65 @@
-import React, {useState} from "react";
-import { View, StyleSheet, Pressable } from "react-native";
+import React, { useState } from "react";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { SIZES } from "../constants";
-
-// Navigation
 // import { useNavigation } from '@react-navigation/native';
 
-// Svg
-import { Navigation_1, Navigation_2, Navigation_3, Navigation_4, Navigation_5 } from "../assets/svg";
+import {
+	Navigation_1,
+	Navigation_2,
+	Navigation_3,
+	Navigation_4,
+	Navigation_5,
+} from "../assets/svg";
 
 const Navigation = ({ navigate }) => {
 	// const navigation = useNavigation();
-	const [activeNav, setActiveNav] = useState('one');
+	const [activeNav, setActiveNav] = useState("one");
+	const navigation = [
+		{
+			id: 1,
+			active: "one",
+			icon: <Navigation_5 activeNav={activeNav} />,
+			navigate: "Home",
+		},
+		{
+			id: 2,
+			active: "two",
+			icon: <Navigation_1 activeNav={activeNav} />,
+			navigate: "About",
+		},
+		{
+			id: 3,
+			active: "three",
+			icon: <Navigation_2 activeNav={activeNav} />,
+			navigate: "Research",
+		},
+		{
+			id: 4,
+			active: "four",
+			icon: <Navigation_3 activeNav={activeNav} />,
+			navigate: "ResearchBase",
+		},
+		{
+			id: 5,
+			active: "five",
+			icon: <Navigation_4 activeNav={activeNav} />,
+			navigate: "Mks",
+		},
+	];
 	return (
 		<View style={styles.navigation}>
-            <Pressable onPress={() => {
-				setActiveNav('one');
-				navigate("Home");
-			}}>
-				<View style={styles.navigation__item}>
-					<Navigation_5 activeNav={activeNav}/>
-				</View>
-			</Pressable>
-			<Pressable onPress={() => {
-				setActiveNav('two');
-				navigate("About");
-			}}>
-				<View style={styles.navigation__item}>
-					<Navigation_1 activeNav={activeNav}/>
-				</View>
-			</Pressable>
-			<Pressable onPress={() => {
-				setActiveNav('three');
-				navigate("Research");
-			}}>
-				<View style={styles.navigation__item}>
-					<Navigation_2 activeNav={activeNav}/>
-				</View>
-			</Pressable>
-			<Pressable onPress={() => {
-				setActiveNav('four');
-				navigate("ResearchBase");
-			}}>
-				<View style={styles.navigation__item}>
-					<Navigation_3 activeNav={activeNav}/>
-				</View>
-			</Pressable>
-			<Pressable onPress={() => {
-				setActiveNav('five');
-				navigate("Mks");
-			}}>
-				<View style={styles.navigation__item}>
-					<Navigation_4 activeNav={activeNav}/>
-				</View>
-			</Pressable>
+			{navigation.map((item) => (
+				<TouchableOpacity
+					key={item.id}
+					activeOpacity={0.3}
+					onPress={() => {
+						setActiveNav(`${item.active}`);
+						navigate(`${item.navigate}`);
+					}}
+				>
+					<View style={styles.navigation__item}>{item.icon}</View>
+				</TouchableOpacity>
+			))}
 		</View>
 	);
 };

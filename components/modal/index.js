@@ -17,6 +17,10 @@ import Research3_Modal_2 from "./Research3_Modal_2";
 import Research3_Modal_3 from "./Research3_Modal_3";
 import Research3_Modal_4 from "./Research3_Modal_4";
 
+import ResearchBase_Modal_1 from "./ResearchBase_Modal_1";
+
+import Experiment_Modal from "./Experiment_Modal";
+
 export {
     About4_Modal_1,
     
@@ -36,4 +40,8 @@ export {
     Research3_Modal_2,
     Research3_Modal_3,
     Research3_Modal_4,
+
+    ResearchBase_Modal_1,
+    
+    Experiment_Modal,
 }

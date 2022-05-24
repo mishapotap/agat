@@ -1,14 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { ResearchBase_Filter } from "../assets/svg";
 import {COLORS, SIZES} from '../constants';
+import {ResearchBase_Modal_1} from "./modal";
 
 const ResearchBase_Block_1 = () => {
+    const [modalSwitch, setModalSwitch] = useState(false);
     return (
         <View style={styles.content}>
-            <View style={styles.menu}>
+            <ResearchBase_Modal_1 modalVisible={modalSwitch} setModalVisible={setModalSwitch}/>
+            <View style={styles.switch}>
                 <Text style={styles.text}>Выбор направления</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => setModalSwitch(true)}>
                     <ResearchBase_Filter/>
                 </TouchableOpacity>
             </View>
@@ -27,6 +30,7 @@ const ResearchBase_Block_1 = () => {
                     </View>
                 </View>
             </View>
+            
         </View>
     )
 }
@@ -38,7 +42,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-end',
     },
-    menu: {
+    switch: {
         flexDirection: "row",
         justifyContent: 'space-between',
         alignItems: 'center',

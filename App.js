@@ -6,9 +6,7 @@ import "react-native-gesture-handler";
 import { NavigationContainer, useNavigationContainerRef } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Navigation from "./components/Navigation";
-
-// Pages
-import { Home, About, Research, ResearchBase, Mks } from "./screens";
+import { Home, About, Research, ResearchBase, Mks, Experiment } from "./screens";
 import { Layout } from "./components";
 
 const Stack = createNativeStackNavigator();
@@ -19,11 +17,12 @@ export default function App() {
 		<Layout>
 			<NavigationContainer ref={ref}>
 				<Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={"Home"}>
-					<Stack.Screen name="Home" component={Home} />
-					<Stack.Screen name="About" component={About} />
-					<Stack.Screen name="Research" component={Research} />
-					<Stack.Screen name="ResearchBase" component={ResearchBase} />
-					<Stack.Screen name="Mks" component={Mks} />
+					<Stack.Screen animation={"slide_from_right"} name="Home" component={Home} />
+					<Stack.Screen animation={"slide_from_right"} name="About" component={About} />
+					<Stack.Screen animation={"slide_from_right"} name="Research" component={Research} />
+					<Stack.Screen animation={"slide_from_right"} name="ResearchBase" component={ResearchBase} />
+					<Stack.Screen animation={"slide_from_right"} name="Mks" component={Mks} />
+					<Stack.Screen animation={"slide_from_right"} name="Experiment" component={Experiment} />
 				</Stack.Navigator>
 			</NavigationContainer>
 			<Navigation navigate={ref.navigate} />

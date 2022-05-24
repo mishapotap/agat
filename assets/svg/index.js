@@ -40,7 +40,19 @@ import Navigation_3 from "./Navigation_3"
 import Navigation_4 from "./Navigation_4"
 import Navigation_5 from "./Navigation_5"
 import Modal_CloseButton from "./Modal_CloseButton"
+import Modal_BackButton from "./Modal_BackButton"
+import Modal_PlayButton from "./Modal_PlayButton"
+import Modal_PhotoButton from "./Modal_PhotoButton"
+import Modal_CheckBox from "./Modal_CheckBox"
+import Modal_CheckBox_disabled from "./Modal_CheckBox_disabled"
 import ResearchBase_Filter from "./ResearchBase_Filter"
+import ResearchBase_Icon_1 from "./ResearchBase_Icon_1"
+import ResearchBase_Icon_2 from "./ResearchBase_Icon_2"
+import ResearchBase_Icon_3 from "./ResearchBase_Icon_3"
+import ResearchBase_Icon_4 from "./ResearchBase_Icon_4"
+import ResearchBase_Icon_5 from "./ResearchBase_Icon_5"
+import ResearchBase_Icon_6 from "./ResearchBase_Icon_6"
+
 
 export {
     Home_1,
@@ -85,5 +97,16 @@ export {
     Navigation_4,
     Navigation_5,
     Modal_CloseButton,
+    Modal_BackButton,
+    Modal_PlayButton,
+    Modal_PhotoButton,
+    Modal_CheckBox,
+    Modal_CheckBox_disabled,
     ResearchBase_Filter,
+    ResearchBase_Icon_1,
+    ResearchBase_Icon_2,
+    ResearchBase_Icon_3,
+    ResearchBase_Icon_4,
+    ResearchBase_Icon_5,
+    ResearchBase_Icon_6,
 }

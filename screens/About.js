@@ -4,15 +4,10 @@ import { Layout, AboutBlock_1, AboutBlock_2, AboutBlock_3, AboutBlock_4 } from "
 import {about_1_background, about_2_background, about_4_background} from '../constants/images';
 import {SIZES} from '../constants';
 
-// import { COLORS, FONTS, SIZES, images, svg, icons } from '../constants';
-// import { useLinkTo } from "@react-navigation/native";
-
 
 const About = () => {
-	// const linkTo = useLinkTo();
 	return (
 		<Layout>
-			{/* <ScrollView showsVerticalScrollIndicator={false} style={{width: SIZES.width, height: SIZES.height}}> */}
 			<ScrollView showsVerticalScrollIndicator={false}>
 				<ImageBackground style={styles.background} source={about_1_background}>
 					<AboutBlock_1/>

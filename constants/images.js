@@ -11,6 +11,8 @@ const research_1_image_4 = require('../assets/images/research_1_image_4.jpg')
 const research_1_image_5 = require('../assets/images/research_1_image_5.jpg')
 const research_1_image_6 = require('../assets/images/research_1_image_6.jpg')
 const researchBase_1_background = require('../assets/images/researchBase_1_background.jpg')
+const researchBase_base_background = require('../assets/images/researchBase_base_background.jpg')
+const experiment_background = require('../assets/images/experiment_background.jpg')
 
 export {
     about_1_background,
@@ -26,4 +28,6 @@ export {
     research_1_image_5,
     research_1_image_6,
     researchBase_1_background,
+    researchBase_base_background,
+    experiment_background,
 }

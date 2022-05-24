@@ -1,19 +1,71 @@
-// const banners = [
-//     {
-//         id: 1,
-//         title: 'Same Price of $100',
-//         description: 'Shoe in Miniacs Shop',
-//         date: 'Dec 24',
-//         image: require('../assets/images/banner-01.png'),
-//     },
-//     {
-//         id: 2,
-//         title: 'FlASH SALE Haloween',
-//         description: 'Stay tune and check your notif everyday',
-//         date: '6 hours',
-//         image: require('../assets/images/banner-02.png'),
-//     }
-// ]
+import {ResearchBase_Icon_1, ResearchBase_Icon_2, ResearchBase_Icon_3, ResearchBase_Icon_4, ResearchBase_Icon_5, ResearchBase_Icon_6} from '../assets/svg'
+import { Navigation_1, Navigation_2, Navigation_3, Navigation_4, Navigation_5 } from "../assets/svg";
+
+const filters = [
+    {
+        id: 1,
+        name: 'Космическая биология и биотехнология',
+        icon: <ResearchBase_Icon_1/>,
+    },
+    {
+        id: 2,
+        name: 'Космическая биология и биотехнология',
+        icon: <ResearchBase_Icon_2/>,
+    },
+    {
+        id: 3,
+        name: 'Космическая биология и биотехнология',
+        icon: <ResearchBase_Icon_3/>,
+    },
+    {
+        id: 4,
+        name: 'Космическая биология и биотехнология',
+        icon: <ResearchBase_Icon_4/>,
+    },
+    {
+        id: 5,
+        name: 'Космическая биология и биотехнология',
+        icon: <ResearchBase_Icon_5/>,
+    },
+    {
+        id: 6,
+        name: 'Космическая биология и биотехнология',
+        icon: <ResearchBase_Icon_6/>,
+    },
+]
+
+const navigation = [
+    {
+        id: 1,
+        active: 'one',
+        icon: <Navigation_5/>,
+        navigate: 'Home',
+    },
+    {
+        id: 2,
+        active: 'two',
+        icon: <Navigation_1/>,
+        navigate: 'About',
+    },
+    {
+        id: 3,
+        active: 'three',
+        icon: <Navigation_2/>,
+        navigate: 'Research',
+    },
+    {
+        id: 4,
+        active: 'four',
+        icon: <Navigation_3/>,
+        navigate: 'ResearchBase',
+    },
+    {
+        id: 5,
+        active: 'five',
+        icon: <Navigation_4/>,
+        navigate: 'Mks',
+    },
+]
 
 // const quickALinks = [
 //     {
@@ -68,7 +120,8 @@
 // ]
 
 
-// export default {
-//     banners,
-//     quickALinks,
-// }
+export default {
+    filters,
+    navigation,
+    // quickALinks,
+}
