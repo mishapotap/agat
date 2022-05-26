@@ -9,10 +9,9 @@ const ResearchBase_Block_2 = ({navigation, baseUrl, filteredItems}) => {
             {filteredItems.map(item => (
                 <TouchableOpacity key={item.ID} style={styles.item} onPress={() => navigation.navigate('Experiment', {url: item.DETAIL_PAGE_URL})}>
                     <Image style={styles.image} source={{uri:`${baseUrl}${item.PREVIEW_PICTURE}`}}/>
+                    <View style={styles.imageLayer}></View>
                     <View style={styles.filter}>
-                        <View style={styles.box}>
-                            {/* Тут должна быть svg */}
-                        </View>
+                        <Image style={{width: 53, height: 53, marginRight: 20}} source={{uri:`${baseUrl}${item?.PROPERTIES?.spisoknapravisledicon}`}}/>
                         <Text style={styles.filterName}>
                             {item.PROPERTIES?.spisoknapravisled ? item.PROPERTIES.spisoknapravisled : "Нет информации"}
                         </Text>
@@ -46,17 +45,15 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         borderRadius: 30,
-        zIndex: -1,
+        zIndex: -2,
     },
-    box: {
-        width: 53,
-        height: 53,
-        borderRadius: 13,
-        borderWidth: StyleSheet.hairlineWidth,
-        borderColor: COLORS.white,
-        justifyContent: "center",
-        alignItems: "center",
-        marginRight: 20,
+    imageLayer: {
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        borderRadius: 30,
+        zIndex: -1,
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
     },
     filter: {
         flexDirection: "row",

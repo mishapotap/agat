@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, StyleSheet, Text, Pressable, View, SafeAreaView, ScrollView, Image } from "react-native";
-import { FONTS } from "../../constants";
+import { COLORS, FONTS } from "../../constants";
 import {about_4_modal} from '../../constants/images';
 import { Modal_CloseButton } from "../../assets/svg";
 
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
-        backgroundColor: "rgb(220, 220, 220)",
+        backgroundColor: COLORS.white,
 		// borderRadius: 30,
 	},
     header: {
@@ -60,13 +60,15 @@ const styles = StyleSheet.create({
         marginBottom: 24,
     },
     image: {
+        width: 450,
+        height: 210,
         marginBottom: 30,
         alignSelf: 'center',
     },
     close: {
         position: 'absolute',
-        top: 20,
-        right: 20,
+        top: 25,
+        right: 30,
         zIndex: 10,
     },
 });

@@ -4,7 +4,7 @@ import { ResearchBase_Filter } from "../assets/svg";
 import {COLORS, SIZES} from '../constants';
 import {ResearchBase_Modal_1} from "./modal";
 
-const ResearchBase_Block_1 = ({items, setFilteredItems}) => {
+const ResearchBase_Block_1 = ({items, info, setFilteredItems}) => {
 
     const [modalSwitch, setModalSwitch] = useState(false);
 
@@ -23,12 +23,12 @@ const ResearchBase_Block_1 = ({items, setFilteredItems}) => {
                     <View style={{width: '50%'}}>
                         <Text style={styles.current}>Текущие</Text>
                         <View style={styles.hr}></View>
-                        <Text style={styles.count}>123</Text>
+                        <Text style={styles.count}>{info?.CURRENT?.PUBLIC}</Text>
                     </View>
                     <View style={{width: '50%'}}>
                         <Text style={styles.current}>Завершенные</Text>
                         <View style={styles.hr}></View>
-                        <Text style={styles.count}>456</Text>
+                        <Text style={styles.count}>{info?.COMPLETED?.PUBLIC}</Text>
                     </View>
                 </View>
             </View>

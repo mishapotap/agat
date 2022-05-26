@@ -8,10 +8,11 @@ import {
 	SafeAreaView,
 	ScrollView,
 	Image,
+	TouchableOpacity,
 } from "react-native";
-import { FONTS } from "../../constants";
+import { COLORS, FONTS, dummyData } from "../../constants";
 import { about_4_modal } from "../../constants/images";
-import { Modal_CloseButton } from "../../assets/svg";
+import { About_1_arrow, Modal_CloseButton } from "../../assets/svg";
 
 const Research3_Modal_2 = ({ modalVisible, setModalVisible }) => {
 	return (
@@ -25,72 +26,35 @@ const Research3_Modal_2 = ({ modalVisible, setModalVisible }) => {
 			}}
 		>
 			<View style={styles.centeredView}>
-				<Pressable style={styles.close} onPress={() => setModalVisible(!modalVisible)}>
+				<TouchableOpacity style={styles.close} onPress={() => setModalVisible(!modalVisible)}>
 					<Modal_CloseButton />
-				</Pressable>
-				<ScrollView showsVerticalScrollIndicator={false} style={{ width: "80%" }}>
-					<View style={styles.header}>
-						<Text style={flattenStyles.title}>
-							Ценности космических исследований и экспериментов
-						</Text>
-					</View>
-					<View style={{ alignSelf: "center" }}>
-						<Text style={flattenStyles.middle}>
-							Космические исследования и эксперименты проводятся на Международной
-							космической станции (МКС).
-						</Text>
-						<Text style={flattenStyles.paragraph}>
-							МКС представляет собой многоцелевую исследовательскую лабораторию в
-							которой проводится широкий спектр научно-прикладных исследований и
-							экспериментов различных направлений, отрабатываются новые технологии и
-							испытываются новые материалы, исследуются особенности физических и
-							биологических процессов, проходят наблюдения за земным покровом и
-							атмосферными явлениями, реализуются различные образовательные и
-							популяризаторские проекты.
-						</Text>
-						<Text style={flattenStyles.paragraph}>
-							Особые условия космического полёта, недоступные на Земле и возможность
-							управлять процессом проведения исследований не только с Земли, но и с
-							борта МКС благодаря присутствию на станции человека обеспечивают МКС
-							явное преимущество перед наземными исследовательскими комплексами.
-						</Text>
-						<Text style={flattenStyles.middle}>
-							На Российском сегменте МКС (РС МКС) проводятся исследования по следующим
-							направлениям:
-						</Text>
-						<View style={{ marginBottom: 24 }}>
-							<Text style={FONTS.modalList}>
-								{"\u2022"} Исследование Земли и космоса
-							</Text>
-							<Text style={FONTS.modalList}>
-								{"\u2022"} Космическая биология и биотехнология
-							</Text>
-							<Text style={FONTS.modalList}>
-								{"\u2022"} Физико-химические процессыи материалы в условиях космоса
-							</Text>
-							<Text style={FONTS.modalList}>{"\u2022"} Человек в космосе</Text>
-							<Text style={FONTS.modalList}>
-								{"\u2022"} Технологии освоения космического пространства
-							</Text>
-							<Text style={FONTS.modalList}>
-								{"\u2022"} Образование и популяризация космических исследований
-							</Text>
+				</TouchableOpacity>
+				<View style={styles.header}>
+					<Text style={flattenStyles.title}>
+						Этапы жизненного цикла космических исследований
+					</Text>
+				</View>
+				<ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{ width: "100%"}}>
+					<View style={styles.container}>
+					{dummyData.etaps.map((etap) => (
+						<View key={etap.name} style={styles.etap}>
+							<View style={styles.etapTitle}>
+								<Text style={styles.etapTitleText}><Text style={{color: "#0066FF"}}>{etap.number}. </Text>{etap.name}</Text>
+								<About_1_arrow/>
+							</View>
+							<View style={styles.etapTimeline}>
+								{etap.content.map((item) => (
+									<View key={item.id} style={{flexDirection: "row", width: 160, height: 200, alignItems: (item.id % 2) ? 'flex-end' : 'flex-start'}}>
+										<Text style={styles.timelineItemNumber}>{item.id}</Text>
+										<Text style={styles.timelineText}>{item.text}</Text>
+										<View style={[styles.timelineHr, {top: (item.id % 2) ? null : 70, bottom: (item.id % 2) ? 70 : null}]}></View>
+										<View style={styles.timelineHrMain}></View>
+										<View style={styles.timelineCircle}></View>
+									</View>
+								))}
+							</View>
 						</View>
-						<Text style={flattenStyles.middle}>
-							Результаты космических исследований на МКС имеют ценность
-						</Text>
-						<Text style={flattenStyles.paragraph}>
-							не только для фундаментальной науки и пилотируемой космонавтики (при
-							подготовке к длительным космическим полётам, в том числе, на другие
-							небесные тела и планеты, а также для дальнейшего освоения космоса
-							человеком).
-						</Text>
-						<Text style={flattenStyles.paragraph}>
-							Уже сегодня определённые методики, технологии, устройства, разработанные
-							для нужд космических пилотируемых полётов, находят практическое
-							применение и в различных сферах деятельности человека на Земле.
-						</Text>
-						<Image style={styles.image} source={about_4_modal} />
+					))}
 					</View>
 				</ScrollView>
 			</View>
@@ -103,7 +67,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
-		backgroundColor: "rgb(220, 220, 220)",
+		backgroundColor: COLORS.white,
 		// borderRadius: 30,
 	},
 	header: {
@@ -111,22 +75,86 @@ const styles = StyleSheet.create({
 		borderBottomColor: "rgba(0, 0, 0, 0.15)",
 		marginBottom: 24,
 	},
-	image: {
-		marginBottom: 30,
-		alignSelf: "center",
-	},
 	close: {
 		position: "absolute",
-		top: 20,
-		right: 20,
+		top: 25,
+		right: 30,
 		zIndex: 10,
+	},
+	container: {
+		flexDirection: "row",
+		alignItems: "center",
+		height: 250,
+		marginLeft: 70,
+	},
+	etap: {
+		marginRight:  150,
+	},
+	etapTitle: {
+		alignItems: 'center',
+		flexDirection: "row",
+		marginBottom: 30,
+	},
+	etapTitleText: {
+		marginRight: 15,
+		// text
+		fontWeight: '600',
+		fontSize: 15,
+		lineHeight: 18,
+		letterSpacing: 0.5,
+		color: COLORS.black,
+	},
+	etapTimeline: {
+		flexDirection: "row",
+	},
+	
+	timelineText: {
+		height: 70,
+		// text
+		fontWeight: '500',
+		fontSize: 11,
+		lineHeight: 15,
+		color: COLORS.black,
+	},
+	timelineHr: {
+		position: 'absolute',
+		left: 15,
+		// bottom: 70,
+		// top: 70,
+		height: 15,
+		marginVertical: 8,
+		width: StyleSheet.hairlineWidth,
+		backgroundColor: COLORS.black,
+	},
+	timelineHrMain: {
+		position: 'absolute',
+		top: 100,
+		width: '100%',
+		height: StyleSheet.hairlineWidth,
+		backgroundColor: COLORS.black,
+	},
+	timelineCircle: {
+		position: 'absolute',
+		left: 11.5,
+		top: 96.5,
+		width: 7,
+		height: 7,
+		borderRadius: 50,
+		backgroundColor: "#7D7D7D",
+	},
+	timelineItemNumber: {
+		height: 70,
+		marginRight: 10,
+		// text
+		fontWeight: '500',
+		fontSize: 11,
+		lineHeight: 15,
+		color: "#0066FF",
 	},
 });
 
 const flattenStyles = StyleSheet.flatten({
 	title: [FONTS.modalTitle, { marginVertical: 15 }],
-	middle: [FONTS.modalTextBold, { marginBottom: 24, alignSelf: "center", width: 500 }],
-	paragraph: [FONTS.modalText, { marginBottom: 24 }],
 });
 
 export default Research3_Modal_2;

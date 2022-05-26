@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
-		backgroundColor: "rgb(220, 220, 220)",
+		backgroundColor: COLORS.white,
 		// borderRadius: 30,
 	},
 	header: {
@@ -209,8 +209,8 @@ const styles = StyleSheet.create({
 	},
 	close: {
 		position: "absolute",
-		top: 20,
-		right: 20,
+		top: 25,
+		right: 30,
 		zIndex: 10,
 	},
 	item: {

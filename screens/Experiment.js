@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, ImageBackground } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, ImageBackground, Image } from "react-native";
 import {COLORS, SIZES} from '../constants';
 import Layout from "../components/Layout";
 import { experiment_background } from "../constants/images";
@@ -15,9 +15,11 @@ const Experiment = ({route, navigation}) => {
     const [modal, setModal] = useState({});
 
     useEffect(() => {
+        let isMounted = true;
         fetch(`${baseUrl}${url}`)
             .then(res => res.json())
             .then((result) => {
+                if (isMounted)
                 setItem(result.ITEMS)
             },
             (error) => {
@@ -34,18 +36,15 @@ const Experiment = ({route, navigation}) => {
                         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
 					        <Modal_BackButton />
 				        </TouchableOpacity>
-                        {/* <View style={styles.backButton}></View> */}
                         <View style={styles.container}>
                             <Text style={styles.title}>{item?.NAME}</Text>
                             <View style={{flexDirection: 'row'}}>
                                 <View style={styles.statusBlock}>
                                     <Text style={styles.status}>{item?.PROPERTIES?.statusexp}</Text>
-                                    <Text style={styles.date}>{item?.PROPERTIES?.srokprovcrstart}-{item?.PROPERTIES?.srokprovcrend}</Text>
+                                    <Text style={styles.date}>{item?.PROPERTIES?.srokprovcrstart} - {item?.PROPERTIES?.srokprovcrend}</Text>
                                 </View>
                                 <View style={styles.filterBlock}>
-                                    <View style={styles.icon}>
-                                        {/* Тут должна быть svg */}
-                                    </View>
+                                    <Image style={{width: 53, height: 53}} source={{uri:`${baseUrl}${item?.PROPERTIES?.spisoknapravisledicon}`}}/>
                                     <Text style={styles.filter}>{item?.PROPERTIES?.spisoknapravisled}</Text>
                                 </View>
                             </View>
@@ -143,6 +142,7 @@ const styles = StyleSheet.create({
         marginRight: 20,
     },
     status: {
+        marginBottom: 10,
         // text
         fontWeight: '600',
         fontSize: 10,
@@ -166,15 +166,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignItems: 'center',
-    },
-    icon: {
-        width: 53,
-        height: 53,
-        borderRadius: 13,
-        borderWidth: StyleSheet.hairlineWidth,
-        borderColor: COLORS.white,
-        justifyContent: "center",
-        alignItems: "center",
     },
     filter: {
         width: 150,

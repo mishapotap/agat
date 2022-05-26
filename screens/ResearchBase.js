@@ -9,14 +9,18 @@ const ResearchBase = () => {
 
 	const navigation = useNavigation();
     const [items, setItems] = useState([]);
+    const [info, setInfo] = useState([]);
     const [filteredItems, setFilteredItems] = useState([]);
     const baseUrl = 'https://agat.avt.promo';
 
 	useEffect(() => {
+		let isMounted = true;
         fetch(`${baseUrl}/api/baza-issledovaniy/`)
         .then(res => res.json())
         .then((result) => {
-            setItems(result.ITEMS);
+			if (isMounted) 
+			setItems(result.ITEMS);
+			setInfo(result.INFO_COUNT);
 			// setFilteredItems(result.ITEMS);
             },
         (error) => {
@@ -29,7 +33,7 @@ const ResearchBase = () => {
 		<Layout>
 			<ScrollView showsVerticalScrollIndicator={false}>
 				<ImageBackground style={styles.background} source={researchBase_1_background}>
-					<ResearchBase_Block_1 items={items} setFilteredItems={setFilteredItems}/>
+					<ResearchBase_Block_1 items={items} info={info} setFilteredItems={setFilteredItems}/>
 				</ImageBackground>
 
 				<View style={{width: SIZES.width, backgroundColor: 'rgb(28, 28, 28)'}}>
