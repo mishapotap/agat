@@ -52,6 +52,12 @@ import ResearchBase_Icon_3 from "./ResearchBase_Icon_3"
 import ResearchBase_Icon_4 from "./ResearchBase_Icon_4"
 import ResearchBase_Icon_5 from "./ResearchBase_Icon_5"
 import ResearchBase_Icon_6 from "./ResearchBase_Icon_6"
+import Mks_1_Button from "./Mks_1_Button"
+import Mks_1_BackButton from "./Mks_1_BackButton"
+import Mks_1_SoundButton from "./Mks_1_SoundButton"
+import Mks_1_PageButton_White from "./Mks_1_PageButton_White"
+import Mks_1_PageButton_Blue from "./Mks_1_PageButton_Blue"
+import Mks_1_StructureCircle from "./Mks_1_StructureCircle"
 
 
 export {
@@ -109,4 +115,10 @@ export {
     ResearchBase_Icon_4,
     ResearchBase_Icon_5,
     ResearchBase_Icon_6,
+    Mks_1_Button,
+    Mks_1_BackButton,
+    Mks_1_SoundButton,
+    Mks_1_PageButton_White,
+    Mks_1_PageButton_Blue,
+    Mks_1_StructureCircle,
 }

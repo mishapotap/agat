@@ -13,6 +13,9 @@ const research_1_image_6 = require('../assets/images/research_1_image_6.jpg')
 const researchBase_1_background = require('../assets/images/researchBase_1_background.jpg')
 const researchBase_base_background = require('../assets/images/researchBase_base_background.jpg')
 const experiment_background = require('../assets/images/experiment_background.jpg')
+const mks_1_background = require('../assets/images/mks_1_background.png')
+const mks_1_modalbackground = require('../assets/images/mks_1_modalbackground.png')
+const mks_1_starship = require('../assets/images/mks_1_starship.png')
 
 export {
     about_1_background,
@@ -30,4 +33,7 @@ export {
     researchBase_1_background,
     researchBase_base_background,
     experiment_background,
+    mks_1_background,
+    mks_1_modalbackground,
+    mks_1_starship,
 }
