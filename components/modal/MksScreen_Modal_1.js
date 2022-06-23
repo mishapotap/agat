@@ -10,6 +10,7 @@ import modules from "../modules";
 const MksScreen_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
     const [aboutContent, setAboutContent] = useState(false);
     const [structureContent, setStructureContent] = useState(false);
+    const [videoContent, setVideoContent] = useState(false);
     const [structureId, setStructureId] = useState("");
     const [structureContentItem, setStructureContentItem] = useState(false);
     return (
@@ -26,10 +27,14 @@ const MksScreen_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
                     {aboutContent ? (
                         // О модуле
                         <>
-                            <TouchableOpacity style={styles.backButton2} activeOpacity={0.3}	onPress={() => setAboutContent(!aboutContent)}>
+                            <TouchableOpacity style={styles.backButton2} activeOpacity={0.3} onPress={() => setAboutContent(!aboutContent)}>
                                 <Mks_1_BackButton/>
                             </TouchableOpacity>
-                            <Text style={styles.buttonText}>О паопвадопвап модуле</Text>
+                            <ScrollView showsVerticalScrollIndicator={false} style={{width: '100%', paddingLeft: 40}}>
+                                {dummyData.mksAboutInfo.content.map((item, index) => (
+                                    <ContentModule key={index} data={item} modules={modules.base}/>
+                                ))}
+                            </ScrollView>
                         </>
                         ) : structureContent ? (
                         // Состав МКС
@@ -71,8 +76,17 @@ const MksScreen_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
                                     </>
                                 )}
                             </>
-                        )
-                        : (
+                        ) : videoContent ? (
+                        // Видео
+                        <>
+                            <TouchableOpacity style={styles.backButton2} activeOpacity={0.3} onPress={() => setVideoContent(!videoContent)}>
+                                <Mks_1_BackButton/>
+                            </TouchableOpacity>
+                            <View>
+                                <Text style={styles.structureText}>Тут должно быть видео</Text>
+                            </View>
+                        </>
+                        ) : (
                         // Основное меню
                         <ImageBackground style={styles.background} resizeMode={"stretch"} source={mks_1_modalbackground}>
                             <TouchableOpacity style={styles.backButton}	activeOpacity={0.3}	onPress={() => setModalVisible(!modalVisible)}>
@@ -85,15 +99,17 @@ const MksScreen_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
                                 <MksButton width={84} height={50} onPressHandler={() => setStructureContent(!structureContent)}>
                                     <Text style={styles.buttonText}>Состав модуля</Text>
                                 </MksButton>
-                                <MksButton width={84} height={50} onPressHandler={() => setModalVisible(!modalVisible)}>
+                                <MksButton width={84} height={50} onPressHandler={() => setVideoContent(!videoContent)}>
                                     <Text style={styles.buttonText}>Видео</Text>
                                 </MksButton>
-                                <MksButton width={84} height={50} onPressHandler={() => setModalVisible(!modalVisible)}>
+                                <MksButton width={84} height={50} onPressHandler={() => {
+                                    setModalVisible(!modalVisible);
+                                    navigation.navigate('Research')
+                                    }}>
                                     <Text style={styles.buttonText}>Космические исследования</Text>
                                 </MksButton>
                             </View>
                         </ImageBackground>
-
                     )}
             </View>
         </Modal>

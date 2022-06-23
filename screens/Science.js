@@ -32,7 +32,7 @@ const MksScreen = ({route, navigation}) => {
 								<Mks_1_PageButton_Blue/>
 							</MksCircle>
 
-							<MksCircle bottomText={"Наука"} onPressHandler={() => navigation.navigate('Science')}>
+							<MksCircle bottomText={"Наука"}>
 								<Mks_1_PageButton_White/>
 							</MksCircle>
 						</View>

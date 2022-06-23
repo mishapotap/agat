@@ -3,8 +3,10 @@ import { View, StyleSheet, ScrollView, ImageBackground } from "react-native";
 import { Layout, ResearchBlock_1, ResearchBlock_2, ResearchBlock_3, ResearchBlock_4 } from "../components";
 import {COLORS, SIZES} from '../constants';
 import {research_1_background, research_4_background} from '../constants/images';
+import { useNavigation } from "@react-navigation/native";
 
 const Research = () => {
+	const navigation = useNavigation()
 	return (
 		<Layout>
 			<ScrollView showsVerticalScrollIndicator={false}>
@@ -21,7 +23,7 @@ const Research = () => {
 				</View>
 				
 				<ImageBackground style={styles.background} source={research_4_background}>
-					<ResearchBlock_4/>
+					<ResearchBlock_4 navigation={navigation}/>
 				</ImageBackground>
 			</ScrollView>
 		</Layout>

@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { COLORS } from "../../../constants";
 
-const Paragraph = ({ data: text }) => {
+const BoldText = ({ data: text }) => {
 	return (
 		<View style={{marginBottom: 25}}>
 			<Text style={styles.text}>{text}</Text>
@@ -13,15 +13,15 @@ const Paragraph = ({ data: text }) => {
 const styles = StyleSheet.create({
 	text: {
 		// text
-		fontWeight: "400",
-		fontSize: 13,
-		lineHeight: 21,
-		letterSpacing: 0.9,
+		fontWeight: "700",
+		fontSize: 15,
+		lineHeight: 34,
+		letterSpacing: 1,
 		color: COLORS.white
 	}
 });
 
 export default {
-	name: "Paragraph",
-	Component: Paragraph,
+	name: "BoldText",
+	Component: BoldText,
 };

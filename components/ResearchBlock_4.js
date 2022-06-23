@@ -3,12 +3,12 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Research_4_icon } from "../assets/svg";
 import {COLORS, SIZES} from '../constants';
 
-const ResearchBlock_4 = () => {
+const ResearchBlock_4 = ({navigation}) => {
     return (
         <View style={styles.content}>
                 <View style={styles.block}>
                     <Text style={styles.text}>Космические исследования и эксперименты проводятся на Российском сегменте Международной космической станции</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Mks')}>
                         <Research_4_icon/>
                     </TouchableOpacity>
                 </View>
