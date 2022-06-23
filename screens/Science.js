@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, Image } from "react-native";
 import Layout from "../components/Layout";
 import { COLORS, SIZES } from "../constants";
 import { mks_1_background, mks_1_starship } from "../constants/images";
 import { Mks_1_BackButton, Mks_1_SoundButton, Mks_1_PageButton_White, Mks_1_PageButton_Blue } from "../assets/svg";
 import { MksButton, MksCircle } from "../components/content";
+import { ScienceScreen_Modal_1 } from "../components/modal";
 
-const MksScreen = ({route, navigation}) => {
+const Science = ({route, navigation}) => {
+	const [modalScreen, setModalScreen] = useState(false);
 	return (
 		<Layout>
 			<ImageBackground style={styles.background} resizeMode={"stretch"} source={mks_1_background}>
@@ -37,11 +39,11 @@ const MksScreen = ({route, navigation}) => {
 							</MksCircle>
 						</View>
 
-						<MksButton bottomText={"Управление"} width={84} height={50} onPressHandler={() => navigation.goBack()}>
+						<MksButton bottomText={"Управление"} width={84} height={50} onPressHandler={() => setModalScreen(true)}>
 							<Image style={{position: 'absolute', width: 72, height: 40}} source={mks_1_starship}/>
 						</MksButton>
 					</View>
-
+					<ScienceScreen_Modal_1 modalVisible={modalScreen} setModalVisible={setModalScreen} navigation={navigation}/>
 				</View>
 			</ImageBackground>
         </Layout>
@@ -92,4 +94,4 @@ const styles = StyleSheet.create({
 	}
 });
 
-export default MksScreen;
+export default Science;

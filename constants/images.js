@@ -16,6 +16,8 @@ const experiment_background = require('../assets/images/experiment_background.jp
 const mks_1_background = require('../assets/images/mks_1_background.png')
 const mks_1_modalbackground = require('../assets/images/mks_1_modalbackground.png')
 const mks_1_starship = require('../assets/images/mks_1_starship.png')
+const mks_1_starship_left = require('../assets/images/mks_1_starship_left.png')
+const mks_1_starship_right = require('../assets/images/mks_1_starship_right.png')
 
 export {
     about_1_background,
@@ -36,4 +38,6 @@ export {
     mks_1_background,
     mks_1_modalbackground,
     mks_1_starship,
+    mks_1_starship_left,
+    mks_1_starship_right,
 }

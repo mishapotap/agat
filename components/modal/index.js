@@ -19,6 +19,7 @@ import ResearchBase_Modal_1 from "./ResearchBase_Modal_1";
 import Experiment_Modal from "./Experiment_Modal";
 
 import MksScreen_Modal_1 from "./MksScreen_Modal_1";
+import ScienceScreen_Modal_1 from "./ScienceScreen_Modal_1";
 
 export {
     About4_Modal_1,
@@ -42,4 +43,5 @@ export {
     Experiment_Modal,
 
     MksScreen_Modal_1,
+    ScienceScreen_Modal_1,
 }
