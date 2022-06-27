@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { Modal, StyleSheet, Text, View, ImageBackground, TouchableOpacity } from "react-native";
+import { Video } from "expo-av";
 import { COLORS, FONTS, SIZES, dummyData } from "../../constants";
 import { mks_1_modalbackground } from "../../constants/images";
 import { Mks_1_BackButton, Mks_1_StructureCircle } from "../../assets/svg";
@@ -7,7 +8,7 @@ import { MksButton, ContentModule } from "../content";
 import { ScrollView } from "react-native-gesture-handler";
 import modules from "../modules";
 
-const MksScreen_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
+const Mks_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
     const [aboutContent, setAboutContent] = useState(false);
     const [structureContent, setStructureContent] = useState(false);
     const [videoContent, setVideoContent] = useState(false);
@@ -82,9 +83,14 @@ const MksScreen_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
                             <TouchableOpacity style={styles.backButton2} activeOpacity={0.3} onPress={() => setVideoContent(!videoContent)}>
                                 <Mks_1_BackButton/>
                             </TouchableOpacity>
-                            <View>
-                                <Text style={styles.structureText}>Тут должно быть видео</Text>
-                            </View>
+                            <Video
+                                style={styles.videoBackground}
+                                source={require("../../assets/video/main.mp4")}
+                                resizeMode="cover"
+                                useNativeControls
+                                isLooping={true}
+                                shouldPlay={true}
+                            />
                         </>
                         ) : (
                         // Основное меню
@@ -125,6 +131,11 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
         paddingHorizontal: 35,
 	},
+    videoBackground: {
+		position: "absolute",
+		width: SIZES.width,
+		height: SIZES.height,
+	},
     background: {
 		width: '100%',
 		height: '100%',
@@ -139,8 +150,8 @@ const styles = StyleSheet.create({
     backButton2: {
 		position: 'absolute',
         zIndex: 10,
-		top: 30,
-		right: 30,
+		top: 20,
+		right: 35,
 	},
     buttonText: {
         position: 'absolute',
@@ -165,4 +176,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default MksScreen_Modal_1;
+export default Mks_Modal_1;

@@ -275,7 +275,7 @@ const mksAboutInfo = {
 	content: [
 		{
 		slug: "moduleImage",
-		value: require("../assets/images/MksScreenModal/main/modal-01.jpg"),
+		value: require("../assets/images/MksModal/main/modal-01.jpg"),
 		},
 		{
 		slug: "heading",
@@ -319,7 +319,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/1/modal-01.jpg"),
+			value: require("../assets/images/MksModal/1/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -384,7 +384,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/2/modal-01.jpg"),
+			value: require("../assets/images/MksModal/2/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -414,7 +414,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/3/modal-01.jpg"),
+			value: require("../assets/images/MksModal/3/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -486,7 +486,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/4/modal-01.jpg"),
+			value: require("../assets/images/MksModal/4/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -520,7 +520,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/5/modal-01.jpg"),
+			value: require("../assets/images/MksModal/5/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -562,7 +562,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/6/modal-01.jpg"),
+			value: require("../assets/images/MksModal/6/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -592,7 +592,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/7/modal-01.jpg"),
+			value: require("../assets/images/MksModal/7/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -626,7 +626,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/8/modal-01.jpg"),
+			value: require("../assets/images/MksModal/8/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -656,7 +656,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/9/modal-01.jpg"),
+			value: require("../assets/images/MksModal/9/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -702,7 +702,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/10/modal-01.jpg"),
+			value: require("../assets/images/MksModal/10/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -771,7 +771,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/11/modal-01.jpg"),
+			value: require("../assets/images/MksModal/11/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -809,7 +809,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/12/modal-01.jpg"),
+			value: require("../assets/images/MksModal/12/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -847,7 +847,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/13/modal-01.jpg"),
+			value: require("../assets/images/MksModal/13/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -918,7 +918,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/14/modal-01.jpg"),
+			value: require("../assets/images/MksModal/14/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -956,7 +956,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/16/modal-01.jpg"),
+			value: require("../assets/images/MksModal/16/modal-01.jpg"),
 			},
 			{
 			slug: "heading",
@@ -1075,7 +1075,7 @@ const mksStructure = [
 		content: [
 			{
 			slug: "moduleImage",
-			value: require("../assets/images/MksScreenModal/17/modal-01.jpg"),
+			value: require("../assets/images/MksModal/17/modal-01.jpg"),
 			},
 			{
 			slug: "heading",

@@ -30,7 +30,7 @@ const Science = ({route, navigation}) => {
 
 					<View style={{flexDirection: 'row', justifyContent: "space-between", marginHorizontal: 40, marginBottom: 40, alignItems: 'flex-end', flex: 1}}>
 						<View style={{flexDirection: 'row'}}>
-							<MksCircle bottomText={"МКС"} onPressHandler={() => navigation.navigate('MksScreen')}>
+							<MksCircle bottomText={"МКС"} onPressHandler={() => navigation.navigate('Mks')}>
 								<Mks_1_PageButton_Blue/>
 							</MksCircle>
 

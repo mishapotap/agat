@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { Modal, StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image } from "react-native";
+import { Video } from "expo-av";
 import { COLORS, FONTS, SIZES, dummyData } from "../../constants";
 import { mks_1_modalbackground, mks_1_starship, mks_1_starship_left, mks_1_starship_right } from "../../constants/images";
 import { Mks_1_BackButton, Mks_1_StructureCircle } from "../../assets/svg";
@@ -81,9 +82,14 @@ const ScienceScreen_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
                             <TouchableOpacity style={styles.backButton2} activeOpacity={0.3} onPress={() => setVideoContent(!videoContent)}>
                                 <Mks_1_BackButton/>
                             </TouchableOpacity>
-                            <View>
-                                <Text style={styles.structureText}>Тут должно быть видео</Text>
-                            </View>
+                            <Video
+                                style={styles.videoBackground}
+                                source={require("../../assets/video/main.mp4")}
+                                resizeMode="cover"
+                                useNativeControls
+                                isLooping={true}
+                                shouldPlay={true}
+                            />
                         </>
                         ) : (
                         // Основное меню
@@ -144,6 +150,11 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
         paddingHorizontal: 35,
 	},
+    videoBackground: {
+		position: "absolute",
+		width: SIZES.width,
+		height: SIZES.height,
+	},
     background: {
 		width: '100%',
 		height: '100%',
@@ -158,8 +169,8 @@ const styles = StyleSheet.create({
     backButton2: {
 		position: 'absolute',
         zIndex: 10,
-		top: 30,
-		right: 30,
+		top: 20,
+		right: 35,
 	},
     buttonText: {
         position: 'absolute',

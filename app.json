@@ -19,6 +19,11 @@
     ],
     "ios": {
       "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      },
       "bundleIdentifier": "test.agatapp"
     },
     "android": {
