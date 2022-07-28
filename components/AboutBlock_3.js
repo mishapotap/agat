@@ -33,7 +33,7 @@ const AboutBlock_3 = () => {
                                 <Text style={styles.active__circle_number}>2</Text>
                             </View>
                         </View>
-                        <Text style={styles.active__circle_text}>Проведение работ <Text style={{color: "#3C70BE"}}>по анализу российского рынка</Text> коммерческих космических экспериментов</Text>
+                        <Text style={styles.active__circle_text}>Осуществление <Text style={{color: "#3C70BE"}}>поиска и привлечения потенциальных постановщиков</Text> коммерческих космических экспериментов</Text>
                     </View> 
                     : (activeSlide === 'one' || activeSlide === 'three') ?
                     <View style={styles.semiactive__circle}>
@@ -50,7 +50,7 @@ const AboutBlock_3 = () => {
                                 <Text style={styles.active__circle_number}>3</Text>
                             </View>
                         </View>
-                        <Text style={styles.active__circle_text}>Проведение работ <Text style={{color: "#3C70BE"}}>по анализу российского рынка</Text> коммерческих космических экспериментов</Text>
+                        <Text style={styles.active__circle_text}>Организация <Text style={{color: "#3C70BE"}}>проведения экспертизы реализуемости и интеграции</Text> коммерческих космических экспериментов в Долгосрочную Программу Целевых Работ (ДПЦР)</Text>
                     </View> 
                     : (activeSlide === 'two' || activeSlide === 'four') ?
                     <View style={styles.semiactive__circle}>
@@ -67,7 +67,7 @@ const AboutBlock_3 = () => {
                                 <Text style={styles.active__circle_number}>4</Text>
                             </View>
                         </View>
-                        <Text style={styles.active__circle_text}>Проведение работ <Text style={{color: "#3C70BE"}}>по анализу российского рынка</Text> коммерческих космических экспериментов</Text>
+                        <Text style={styles.active__circle_text}><Text style={{color: "#3C70BE"}}>Согласование Технического Задания (ТЗ)</Text> на коммерческие космические эксперименты</Text>
                     </View> 
                     : (activeSlide === 'three' || activeSlide === 'five') ?
                     <View style={styles.semiactive__circle}>
@@ -84,7 +84,7 @@ const AboutBlock_3 = () => {
                                 <Text style={styles.active__circle_number}>5</Text>
                             </View>
                         </View>
-                        <Text style={styles.active__circle_text}>Проведение работ <Text style={{color: "#3C70BE"}}>по анализу российского рынка</Text> коммерческих космических экспериментов</Text>
+                        <Text style={styles.active__circle_text}>Осуществление <Text style={{color: "#3C70BE"}}>общего управления проектом реализации</Text> коммерческих космических экспериментов на всех этапах ЖЦ</Text>
                     </View> 
                     : (activeSlide === 'four' || activeSlide === 'six') ?
                     <View style={styles.semiactive__circle}>
@@ -101,7 +101,7 @@ const AboutBlock_3 = () => {
                                 <Text style={styles.active__circle_number}>6</Text>
                             </View>
                         </View>
-                        <Text style={styles.active__circle_text}>Проведение работ <Text style={{color: "#3C70BE"}}>по анализу российского рынка</Text> коммерческих космических экспериментов</Text>
+                        <Text style={styles.active__circle_text}><Text style={{color: "#3C70BE"}}>Участие в коммерциализации</Text> результатов космических экспериментов</Text>
                     </View> 
                     : activeSlide === 'five' ?
                     <View style={styles.semiactive__circle}>
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
         color: COLORS.black,
     },
     container: {
-        width: 410,
+        width: 450,
         alignItems: 'center',
     },
     pressable: {

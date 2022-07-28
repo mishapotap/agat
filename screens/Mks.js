@@ -6,6 +6,7 @@ import { mks_1_background, mks_1_starship } from "../constants/images";
 import { Mks_1_BackButton, Mks_1_SoundButton, Mks_1_PageButton_White, Mks_1_PageButton_Blue } from "../assets/svg";
 import { MksButton, MksCircle } from "../components/content";
 import { Mks_Modal_1 } from "../components/modal";
+import { WebView } from 'react-native-webview';
 
 const Mks = ({route, navigation}) => {
 	const [modalMks, setModalMks] = useState(false);
@@ -14,35 +15,40 @@ const Mks = ({route, navigation}) => {
 			<ImageBackground style={styles.background} resizeMode={"stretch"} source={mks_1_background}>
 				<View style={styles.content}>
 
-					<View style={{alignItems: 'flex-start', marginTop: 20, marginLeft: 20}}>
-						<Text style={styles.headerText}><Text style={{color: "#0066FF"}}>«МКС»</Text> — пилотируемая орбитальная станция...</Text>
+					<View style={{alignItems: 'flex-start', marginTop: 20, marginLeft: 20, zIndex: 1}}>
+						<Text style={styles.headerText}><Text style={{color: "#0066FF"}}>«МКС»</Text> — пилотируемая орбитальная станция.</Text>
 					</View>
 
-					<View style={{flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 40, marginTop: 20}}>
-						<TouchableOpacity style={styles.button}>
-							<Mks_1_SoundButton/>
-						</TouchableOpacity>
+					<TouchableOpacity style={styles.soundButton}>
+						<Mks_1_SoundButton/>
+					</TouchableOpacity>
 
-						<TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
-							<Mks_1_BackButton/>
-						</TouchableOpacity>
+					<TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('Home')}>
+						<Mks_1_BackButton/>
+					</TouchableOpacity>
+
+					<View style={{position: 'absolute', height: SIZES.height, width: SIZES.width}}>
+						<WebView source={{ uri: 'http://mks.avt.promo/ISS/ISS.html'}} />
 					</View>
 
-					<View style={{flexDirection: 'row', justifyContent: "space-between", marginHorizontal: 40, marginBottom: 40, alignItems: 'flex-end', flex: 1}}>
-						<View style={{flexDirection: 'row'}}>
-							<MksCircle bottomText={"МКС"}>
-								<Mks_1_PageButton_White/>
-							</MksCircle>
+					<View style={{position: 'absolute', bottom: 25, left: SIZES.width * 0.16}}>
+						<MksCircle bottomText={"МКС"}>
+							<Mks_1_PageButton_White/>
+						</MksCircle>
+					</View>
 
-							<MksCircle bottomText={"Наука"} onPressHandler={() => navigation.navigate('Science')}>
-								<Mks_1_PageButton_Blue/>
-							</MksCircle>
-						</View>
+					<View style={{position: 'absolute', bottom: 25, left: SIZES.width * 0.16 + 70}}>
+						<MksCircle bottomText={"Наука"} onPressHandler={() => navigation.navigate('Science')}>
+							<Mks_1_PageButton_Blue/>
+						</MksCircle>
+					</View>
 
+					<View style={{position: 'absolute', bottom: 25, right: SIZES.width * 0.05}}>
 						<MksButton bottomText={"Управление"} width={84} height={50} onPressHandler={() => setModalMks(true)}>
 							<Image style={{position: 'absolute', width: 72, height: 40}} source={mks_1_starship}/>
 						</MksButton>
 					</View>
+						
 					<Mks_Modal_1 modalVisible={modalMks} setModalVisible={setModalMks} navigation={navigation}/>
 
 				</View>
@@ -66,6 +72,7 @@ const styles = StyleSheet.create({
 		height: SIZES.height,
 		alignItems: 'center',
 		justifyContent: 'center',
+		// backgroundColor: 'yellow',
 	},
 	headerText: {
 		// text
@@ -76,9 +83,17 @@ const styles = StyleSheet.create({
 		letterSpacing: 0.5,
 		color: COLORS.white,
 	},
-	button: {
-		justifyContent: 'center',
-		alignItems: 'center',
+	soundButton: {
+		position: 'absolute',
+		left: SIZES.width * 0.16,
+		top: 50,
+		zIndex: 1,
+	},
+	backButton: {
+		position: 'absolute',
+		top: 50,
+		right: SIZES.width * 0.05,
+		zIndex: 1,
 	},
 	buttonText: {
 		// text
@@ -88,11 +103,6 @@ const styles = StyleSheet.create({
 		letterSpacing: 0.5,
 		color: COLORS.white,
 	},
-	backButton: {
-		position: 'absolute',
-		top: 50,
-		right: 50,
-	}
 });
 
 export default Mks;
