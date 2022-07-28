@@ -68,10 +68,11 @@ const styles = StyleSheet.create({
 	navigation: {
 		position: "absolute",
 		left: 0,
-		width: SIZES.width * 0.11,
+		width: 70,
 		height: SIZES.height,
+		paddingVertical: 10,
 		justifyContent: "space-around",
-		backgroundColor: "rgba(0, 0, 0, 0.8)",
+		backgroundColor: "rgba(0, 0, 0, 0.5)",
 		zIndex: 100,
 	},
 	navigation__item: {
