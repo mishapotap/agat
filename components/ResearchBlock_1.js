@@ -19,32 +19,32 @@ const ResearchBlock_1 = () => {
             <Research1_Modal_4 modalVisible={modalResearch4} setModalVisible={setModalResearch4}/>
             <Research1_Modal_5 modalVisible={modalResearch5} setModalVisible={setModalResearch5}/>
             <Research1_Modal_6 modalVisible={modalResearch6} setModalVisible={setModalResearch6}/>
-            <TouchableOpacity onPress={() => setModalResearch1(true)}>
+            <TouchableOpacity onPressOut={() => setModalResearch1(true)}>
                 <View style={{position: 'absolute', top: SIZES.height * 0.5, left: SIZES.width * 0.055}}>
                     <Research_1_Icon1_big />
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => setModalResearch2(true)}>
+            <TouchableOpacity onPressOut={() => setModalResearch2(true)}>
                 <View style={{position: 'absolute', top: SIZES.height * 0.15, left: SIZES.width * 0.09}}>
                     <Research_1_Icon2_big />
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => setModalResearch3(true)}>
+            <TouchableOpacity onPressOut={() => setModalResearch3(true)}>
                 <View style={{position: 'absolute', top: SIZES.height * 0.35, left: SIZES.width * 0.175}}>
                     <Research_1_Icon3_big />
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => setModalResearch4(true)}>
+            <TouchableOpacity onPressOut={() => setModalResearch4(true)}>
                 <View style={{position: 'absolute', top: SIZES.height * 0.15, left: SIZES.width * 0.56}}>
                     <Research_1_Icon4_big />
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => setModalResearch5(true)}>
+            <TouchableOpacity onPressOut={() => setModalResearch5(true)}>
                 <View style={{position: 'absolute', top: SIZES.height * 0.67, left: SIZES.width * 0.58}}>
                     <Research_1_Icon5_big />
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => setModalResearch6(true)}>
+            <TouchableOpacity onPressOut={() => setModalResearch6(true)}>
                 <View style={{position: 'absolute', top: SIZES.height * 0.45, left: SIZES.width * 0.715}}>
                     <Research_1_Icon6_big />
                 </View>

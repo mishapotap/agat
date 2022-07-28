@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
 	},
     contentOne: {
-        paddingLeft: SIZES.width * 0.11,
+        paddingLeft: 70,
         height: SIZES.height,
         flex: 1,
         justifyContent: 'flex-end',
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
         color: COLORS.white,
     },
     contentTwo: {
-        paddingLeft: SIZES.width * 0.11,
+        paddingLeft: 70,
         height: SIZES.height,
         flex: 1,
         justifyContent: 'center',

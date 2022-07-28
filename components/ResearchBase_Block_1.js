@@ -39,7 +39,7 @@ const ResearchBase_Block_1 = ({items, info, setFilteredItems}) => {
 
 const styles = StyleSheet.create({
     content: {
-        paddingLeft: SIZES.width * 0.11,
+        paddingLeft: 70,
         height: SIZES.height,
         flex: 1,
         justifyContent: 'flex-end',

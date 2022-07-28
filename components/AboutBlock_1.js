@@ -61,7 +61,7 @@ const AboutBlock_1 = () => {
 
 const styles = StyleSheet.create({
     content: {
-        paddingLeft: SIZES.width * 0.11,
+        paddingLeft: 70,
         height: SIZES.height,
         flex: 1,
         alignItems: 'center',

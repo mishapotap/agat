@@ -27,7 +27,7 @@ const ResearchBase_Block_2 = ({navigation, baseUrl, filteredItems}) => {
 
 const styles = StyleSheet.create({
     content: {
-        paddingLeft: SIZES.width * 0.11,
+        paddingLeft: 70,
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',

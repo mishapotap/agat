@@ -31,13 +31,13 @@ const Science = ({route, navigation}) => {
 						<WebView source={{ uri: 'http://mks.avt.promo/NAUKA/NAUKA.html'}} />
 					</View>
 
-					<View style={{position: 'absolute', bottom: 25, left: SIZES.width * 0.16}}>
+					<View style={{position: 'absolute', bottom: 25, left: 90}}>
 						<MksCircle bottomText={"МКС"} onPressHandler={() => navigation.navigate('Mks')}>
 							<Mks_1_PageButton_Blue/>
 						</MksCircle>
 					</View>
 
-					<View style={{position: 'absolute', bottom: 25, left: SIZES.width * 0.16 + 70}}>
+					<View style={{position: 'absolute', bottom: 25, left: 160}}>
 						<MksCircle bottomText={"Наука"}>
 							<Mks_1_PageButton_White/>
 						</MksCircle>
@@ -58,7 +58,7 @@ const Science = ({route, navigation}) => {
 
 const styles = StyleSheet.create({
 	content: {
-        paddingLeft: SIZES.width * 0.11,
+        paddingLeft: 70,
 		width: '100%',
         // height: SIZES.height,
         flex: 1,
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
 	},
 	soundButton: {
 		position: 'absolute',
-		left: SIZES.width * 0.16,
+		left: 90,
 		top: 50,
 		zIndex: 1,
 	},

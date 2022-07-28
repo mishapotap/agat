@@ -59,7 +59,7 @@ const ResearchBlock_3 = () => {
 
 const styles = StyleSheet.create({
     content: {
-        paddingLeft: SIZES.width * 0.11,
+        paddingLeft: 70,
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
