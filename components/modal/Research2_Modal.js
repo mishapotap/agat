@@ -1,11 +1,12 @@
 import React from "react";
-import { Modal, StyleSheet, Text, Pressable, View, ImageBackground } from "react-native";
+import { Modal, StyleSheet, Text, Pressable, View, ImageBackground, StatusBar } from "react-native";
 import { COLORS, FONTS, SIZES } from "../../constants";
 import { Modal_CloseButton } from "../../assets/svg";
 
 const Research2_Modal = ({ modalVisible, setModalVisible, content }) => {
 	return (
 		<Modal
+			statusBarTranslucent={true}
 			animationType="slide"
 			transparent={false}
 			visible={modalVisible}
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
 	},
 	close: {
 		position: "absolute",
-		top: 25,
+		top: StatusBar.currentHeight + 20,
 		right: 30,
 		zIndex: 10,
 	},

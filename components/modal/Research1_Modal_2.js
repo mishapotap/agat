@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, StyleSheet, Text, Pressable, View, ScrollView, Image } from "react-native";
+import { Modal, StyleSheet, Text, Pressable, View, ScrollView, Image, StatusBar, TouchableOpacity } from "react-native";
 import { COLORS, FONTS } from "../../constants";
 import { Modal_CloseButton, Research_1_Icon2_big } from "../../assets/svg";
 import { research_1_image_2 } from "../../constants/images";
@@ -7,6 +7,7 @@ import { research_1_image_2 } from "../../constants/images";
 const Research1_Modal_2 = ({ modalVisible, setModalVisible }) => {
 	return (
 		<Modal
+			statusBarTranslucent={true}
 			animationType="slide"
 			transparent={false}
 			visible={modalVisible}
@@ -16,9 +17,9 @@ const Research1_Modal_2 = ({ modalVisible, setModalVisible }) => {
 			}}
 		>
 			<View style={styles.centeredView}>
-				<Pressable style={styles.close} onPress={() => setModalVisible(!modalVisible)}>
+				<TouchableOpacity style={styles.close} onPress={() => setModalVisible(!modalVisible)}>
 					<Modal_CloseButton />
-				</Pressable>
+				</TouchableOpacity>
 				<ScrollView showsVerticalScrollIndicator={false} style={{ width: 580 }}>
 					<View style={styles.header}>
 						<View style={{ alignSelf: "center" }}>
@@ -95,6 +96,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		backgroundColor: "rgb(10,20,30)",
 		// borderRadius: 30,
+		paddingTop: StatusBar.currentHeight,
 	},
 	header: {
 		borderBottomWidth: StyleSheet.hairlineWidth,
@@ -105,7 +107,7 @@ const styles = StyleSheet.create({
 	},
 	close: {
 		position: "absolute",
-		top: 20,
+		top: StatusBar.currentHeight + 20,
 		right: 20,
 		zIndex: 10,
 	},

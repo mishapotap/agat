@@ -1,6 +1,7 @@
 // React
 import React from "react";
 import "react-native-gesture-handler";
+import { StatusBar } from "react-native";
 
 // Navigation
 import { NavigationContainer, useNavigationContainerRef } from "@react-navigation/native";
@@ -15,6 +16,7 @@ export default function App() {
 	const ref = useNavigationContainerRef();
 	return (
 		<Layout>
+			<StatusBar hidden />
 			<NavigationContainer ref={ref}>
 				<Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={"Home"}>
 					<Stack.Screen animation={"slide_from_right"} name="Home" component={Home} />

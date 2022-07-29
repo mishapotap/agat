@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
 		left: 0,
 		width: 70,
 		height: SIZES.height,
-		paddingVertical: 10,
+		paddingVertical: 15,
 		justifyContent: "space-around",
 		backgroundColor: "rgba(0, 0, 0, 0.5)",
 		zIndex: 100,

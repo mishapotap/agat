@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, StyleSheet, Text, Pressable, View, SafeAreaView, ScrollView, Image } from "react-native";
+import { Modal, StyleSheet, Text, Pressable, View, SafeAreaView, ScrollView, Image, StatusBar } from "react-native";
 import { COLORS, FONTS } from "../../constants";
 import {about_4_modal} from '../../constants/images';
 import { Modal_CloseButton } from "../../assets/svg";
@@ -7,6 +7,7 @@ import { Modal_CloseButton } from "../../assets/svg";
 const About4_Modal_1 = ({modalVisible, setModalVisible}) => {
     return (
         <Modal
+        statusBarTranslucent={true}
         animationType="slide"
         transparent={false}
         visible={modalVisible}
@@ -14,6 +15,7 @@ const About4_Modal_1 = ({modalVisible, setModalVisible}) => {
         onRequestClose={() => {
             setModalVisible(!modalVisible);
         }}>	
+            <StatusBar hidden={true} />
             <View style={styles.centeredView}>
                 <Pressable style={styles.close} onPress={() => setModalVisible(!modalVisible)}>
                     <Modal_CloseButton/>
@@ -52,6 +54,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
         backgroundColor: COLORS.white,
+        paddingTop: StatusBar.currentHeight,
 		// borderRadius: 30,
 	},
     header: {
@@ -67,7 +70,7 @@ const styles = StyleSheet.create({
     },
     close: {
         position: 'absolute',
-        top: 25,
+        top: StatusBar.currentHeight + 20,
         right: 30,
         zIndex: 10,
     },
