@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		backgroundColor: "rgb(10,20,30)",
 		// borderRadius: 30,
+		paddingTop: StatusBar.currentHeight,
 	},
 	close: {
 		position: "absolute",

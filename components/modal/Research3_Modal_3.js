@@ -1,18 +1,13 @@
 import React from "react";
-import { Modal, StyleSheet, Text, Pressable, View, ScrollView } from "react-native";
+import { Modal, StyleSheet, Text, Pressable, View, ScrollView, StatusBar } from "react-native";
 import { COLORS, FONTS } from "../../constants";
-import {
-	Modal_CloseButton,
-	Research_3_1,
-	Research_3_2,
-	Research_3_3,
-	Research_3_4,
-} from "../../assets/svg";
+import { Modal_CloseButton,	Research_3_1, Research_3_2,	Research_3_3, Research_3_4 } from "../../assets/svg";
 import * as Linking from "expo-linking";
 
 const Research3_Modal_3 = ({ modalVisible, setModalVisible }) => {
 	return (
 		<Modal
+			statusBarTranslucent={true}
 			animationType="slide"
 			transparent={false}
 			visible={modalVisible}
@@ -164,6 +159,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		backgroundColor: COLORS.white,
 		// borderRadius: 30,
+		paddingTop: StatusBar.currentHeight,
 	},
 	header: {
 		borderBottomWidth: StyleSheet.hairlineWidth,
@@ -172,7 +168,7 @@ const styles = StyleSheet.create({
 	},
 	close: {
 		position: "absolute",
-		top: 25,
+		top: StatusBar.currentHeight + 20,
 		right: 30,
 		zIndex: 10,
 	},

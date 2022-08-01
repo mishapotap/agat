@@ -5,7 +5,10 @@ import ModuleInfo from "./ModuleInfo";
 import ModuleImage from "./ModuleImage";
 import ModuleTechnical from "./ModuleTechnical";
 import ModuleList from "./ModuleList";
+import ResearchModalHeader from "./ResearchModalHeader";
+import ResearchModalList from "./ResearchModalList";
+import ResearchImageWithText from "./ResearchImageWithText";
 
 export default {
-	base: [Heading, Paragraph, BoldText, ModuleInfo, ModuleImage, ModuleTechnical, ModuleList],
+	base: [Heading, Paragraph, BoldText, ModuleInfo, ModuleImage, ModuleTechnical, ModuleList, ResearchModalHeader, ResearchModalList, ResearchImageWithText],
 };

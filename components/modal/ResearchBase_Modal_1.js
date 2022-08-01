@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { Modal, StyleSheet, Text, View, TouchableOpacity, StatusBar } from "react-native";
 import { COLORS, FONTS, SIZES, dummyData } from "../../constants";
 import { Modal_BackButton, Modal_CheckBox, Modal_CheckBox_disabled } from "../../assets/svg";
 
@@ -17,6 +17,7 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFiltere
 
 	return (
 		<Modal
+			statusBarTranslucent={true}
 			animationType="slide"
 			transparent={false}
 			visible={modalVisible}
@@ -80,6 +81,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		backgroundColor: "rgb(16,28,45)",
 		// borderRadius: 30,
+		paddingTop: StatusBar.currentHeight,
 	},
 	close: {
 		position: "absolute",

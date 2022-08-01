@@ -32,7 +32,7 @@ const Mks_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
                                 <Mks_1_BackButton/>
                             </TouchableOpacity>
                             <ScrollView showsVerticalScrollIndicator={false} style={{width: '100%', paddingLeft: 40}}>
-                                {dummyData.mksAboutInfo.content.map((item, index) => (
+                                {dummyData.research1.content.map((item, index) => (
                                     <ContentModule key={index} data={item} modules={modules.base}/>
                                 ))}
                             </ScrollView>

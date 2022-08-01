@@ -4,7 +4,7 @@ import { COLORS } from "../../../constants";
 
 const Paragraph = ({ data: text }) => {
 	return (
-		<View style={{marginBottom: 25}}>
+		<View style={{marginBottom: 24}}>
 			<Text style={styles.text}>{text}</Text>
 		</View>
 	);

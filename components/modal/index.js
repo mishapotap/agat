@@ -1,11 +1,6 @@
 import About4_Modal_1 from "./About4_Modal_1";
 
-import Research1_Modal_1 from "./Research1_Modal_1";
-import Research1_Modal_2 from "./Research1_Modal_2";
-import Research1_Modal_3 from "./Research1_Modal_3";
-import Research1_Modal_4 from "./Research1_Modal_4";
-import Research1_Modal_5 from "./Research1_Modal_5";
-import Research1_Modal_6 from "./Research1_Modal_6";
+import Research1_Modal from "./Research1_Modal";
 
 import Research2_Modal from "./Research2_Modal";
 
@@ -24,12 +19,7 @@ import ScienceScreen_Modal_1 from "./ScienceScreen_Modal_1";
 export {
     About4_Modal_1,
     
-    Research1_Modal_1,
-    Research1_Modal_2,
-    Research1_Modal_3,
-    Research1_Modal_4,
-    Research1_Modal_5,
-    Research1_Modal_6,
+    Research1_Modal,
 
     Research2_Modal,
 

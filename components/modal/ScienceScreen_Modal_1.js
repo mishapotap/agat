@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Modal, StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image } from "react-native";
+import { Modal, StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image, StatusBar } from "react-native";
 import { Video } from "expo-av";
 import { COLORS, FONTS, SIZES, dummyData } from "../../constants";
 import { mks_1_modalbackground, mks_1_starship, mks_1_starship_left, mks_1_starship_right } from "../../constants/images";
@@ -16,6 +16,7 @@ const ScienceScreen_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
     const [structureContentItem, setStructureContentItem] = useState(false);
     return (
         <Modal
+        statusBarTranslucent={true}
         animationType="slide"
         transparent={true}
         visible={modalVisible}
@@ -149,6 +150,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(17, 24, 37, 0.9)',
         paddingVertical: 20,
         paddingHorizontal: 35,
+        paddingTop: StatusBar.currentHeight,
 	},
     videoBackground: {
 		position: "absolute",
