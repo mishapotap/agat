@@ -21,6 +21,9 @@ const ResearchBase_Block_2 = ({navigation, baseUrl, filteredItems}) => {
                     </Text>
                 </TouchableOpacity>
             ))}
+            <TouchableOpacity style={styles.button} onPress={() => {}}>
+                <Text style={styles.buttonText}>Загрузить ещё</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -76,6 +79,25 @@ const styles = StyleSheet.create({
         fontSize: 16,
         lineHeight: 22,
         color: COLORS.white
+    },
+    button: {
+        marginBottom: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 370,
+        height: 33,
+        borderWidth: 1,
+        borderColor: 'rgba(0, 170, 255, 0.47)',
+        borderRadius: 13,
+    },
+    buttonText: {
+        textTransform: 'uppercase',
+        // text
+        fontWeight: '400',
+        fontSize: 11,
+        lineHeight: 14,
+        letterSpacing: 0.4,
+        color: COLORS.white,
     },
 })
 

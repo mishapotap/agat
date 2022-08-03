@@ -23,7 +23,7 @@ const Mks = ({route, navigation}) => {
 						<Mks_1_SoundButton/>
 					</TouchableOpacity>
 
-					<TouchableOpacity style={styles.backButton} onPress={() => navigation.navigate('Home')}>
+					<TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
 						<Mks_1_BackButton/>
 					</TouchableOpacity>
 

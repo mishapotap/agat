@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Modal, StyleSheet, Text, View, ImageBackground, TouchableOpacity } from "react-native";
+import { Modal, StyleSheet, Text, View, ImageBackground, TouchableOpacity, StatusBar } from "react-native";
 import { Video } from "expo-av";
 import { COLORS, FONTS, SIZES, dummyData } from "../../constants";
 import { mks_1_modalbackground } from "../../constants/images";
@@ -16,6 +16,7 @@ const Mks_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
     const [structureContentItem, setStructureContentItem] = useState(false);
     return (
         <Modal
+        statusBarTranslucent={true}
         animationType="slide"
         transparent={true}
         visible={modalVisible}
@@ -32,7 +33,7 @@ const Mks_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
                                 <Mks_1_BackButton/>
                             </TouchableOpacity>
                             <ScrollView showsVerticalScrollIndicator={false} style={{width: '100%', paddingLeft: 40}}>
-                                {dummyData.research1.content.map((item, index) => (
+                                {dummyData.mksAboutInfo.content.map((item, index) => (
                                     <ContentModule key={index} data={item} modules={modules.base}/>
                                 ))}
                             </ScrollView>
@@ -130,6 +131,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(17, 24, 37, 0.9)',
         paddingVertical: 20,
         paddingHorizontal: 35,
+        paddingTop: StatusBar.currentHeight,
 	},
     videoBackground: {
 		position: "absolute",
@@ -150,7 +152,7 @@ const styles = StyleSheet.create({
     backButton2: {
 		position: 'absolute',
         zIndex: 10,
-		top: 20,
+		top: StatusBar.currentHeight + 20,
 		right: 35,
 	},
     buttonText: {

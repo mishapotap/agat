@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
         color: COLORS.black,
     },
     container: {
-        width: 450,
+        width: '80%',
         alignItems: 'center',
     },
     pressable: {

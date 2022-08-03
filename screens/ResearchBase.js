@@ -15,7 +15,7 @@ const ResearchBase = () => {
 
 	useEffect(() => {
 		let isMounted = true;
-        fetch(`${baseUrl}/api/baza-issledovaniy/`)
+        fetch(`${baseUrl}/api/baza-issledovaniy/?PAGEN_1=1`)
         .then(res => res.json())
         .then((result) => {
 			if (isMounted) 
@@ -28,6 +28,10 @@ const ResearchBase = () => {
             }
         )
     }, [])
+
+	// useEffect(() => {
+	// 	filteredItems.length || alert("Нет категорий под выбранный фильтр")
+    // }, [filteredItems])
 
 	return (
 		<Layout>

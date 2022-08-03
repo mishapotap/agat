@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal, StyleSheet, Text, View, TouchableOpacity, StatusBar } from "react-native";
-import { COLORS, FONTS, SIZES, dummyData } from "../../constants";
+import { COLORS, dummyData } from "../../constants";
 import { Modal_BackButton, Modal_CheckBox, Modal_CheckBox_disabled } from "../../assets/svg";
 
 const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFilteredItems }) => {
+
+	const [active, setActive] = useState('Завершен');
+
 	const filterArray = (filter) => {
 		setFilteredItems(
 			items.filter((item) => {
-				// console.log(item?.PROPERTIES?.spisoknapravisled);
-				// console.log(filter);
-				// console.log(item?.PROPERTIES?.spisoknapravisled === filter);
-				return item?.PROPERTIES?.spisoknapravisled === filter;
+				return item?.PROPERTIES?.spisoknapravisled === filter && item?.PROPERTIES?.statusexp === active 
 			})
 		);
 	};
@@ -31,23 +31,19 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFiltere
 					<Modal_BackButton />
 				</TouchableOpacity>
 				<View style={styles.container}>
-					<TouchableOpacity>
+					<TouchableOpacity onPressIn={() => {setActive("Реализуется")}}>
 						<View style={styles.item}>
 							<View style={styles.topBox}>
-								<Modal_CheckBox />
+								{active === "Реализуется" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />} 
 							</View>
 							<Text style={styles.text}>Текущие</Text>
 						</View>
 					</TouchableOpacity>
-					<TouchableOpacity
-						onPress={() => {
-							setFilteredItems([]);
-							setModalVisible(!modalVisible);
-						}}
-					>
+					{/* <TouchableOpacity onPress={() => { setActive("Завершен"); setFilteredItems([]); setModalVisible(!modalVisible);}}> */}
+					<TouchableOpacity onPressIn={() => { setActive("Завершен")}}>
 						<View style={styles.item}>
 							<View style={styles.topBox}>
-								<Modal_CheckBox_disabled />
+							{active === "Завершен" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />}
 							</View>
 							<Text style={styles.text}>Завершенные</Text>
 						</View>

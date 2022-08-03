@@ -1,5 +1,4 @@
 import Layout from "./Layout";
-import Navigation from "./Navigation";
 import HomeBlock_1 from "./HomeBlock_1";
 import AboutBlock_1 from "./AboutBlock_1";
 import AboutBlock_2 from "./AboutBlock_2";
@@ -14,7 +13,6 @@ import ResearchBase_Block_2 from "./ResearchBase_Block_2";
 
 export {
     Layout,
-    Navigation,
     HomeBlock_1,
     AboutBlock_1,
     AboutBlock_2,

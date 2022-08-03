@@ -43,39 +43,6 @@ const filters = [
 	},
 ];
 
-const navigation = [
-	{
-		id: 1,
-		active: "one",
-		icon: <Navigation_5 />,
-		navigate: "Home",
-	},
-	{
-		id: 2,
-		active: "two",
-		icon: <Navigation_1 />,
-		navigate: "About",
-	},
-	{
-		id: 3,
-		active: "three",
-		icon: <Navigation_2 />,
-		navigate: "Research",
-	},
-	{
-		id: 4,
-		active: "four",
-		icon: <Navigation_3 />,
-		navigate: "ResearchBase",
-	},
-	{
-		id: 5,
-		active: "five",
-		icon: <Navigation_4 />,
-		navigate: "Mks",
-	},
-];
-
 const research1 = [
 	{
 		id: 1,
@@ -1865,7 +1832,6 @@ const scienceStructure = [
 
 export default {
 	filters,
-	navigation,
 	research1,
 	research2,
 	etaps,
