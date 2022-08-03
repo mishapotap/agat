@@ -32,7 +32,7 @@ const Science = ({route, navigation}) => {
 					</View>
 
 					<View style={{position: 'absolute', bottom: 25, left: 90}}>
-						<MksCircle bottomText={"МКС"} onPressHandler={() => navigation.navigate('Mks')}>
+						<MksCircle bottomText={"МКС"} mks={true} onPressHandler={() => navigation.navigate('Mks')}>
 							<Mks_1_PageButton_Blue/>
 						</MksCircle>
 					</View>

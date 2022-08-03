@@ -32,7 +32,7 @@ const Mks = ({route, navigation}) => {
 					</View>
 
 					<View style={{position: 'absolute', bottom: 25, left: 90}}>
-						<MksCircle bottomText={"МКС"}>
+						<MksCircle bottomText={"МКС"} mks={true}>
 							<Mks_1_PageButton_White/>
 						</MksCircle>
 					</View>

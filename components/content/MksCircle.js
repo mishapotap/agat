@@ -1,14 +1,14 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native'
 import { COLORS } from "../../constants";
-import { mks_1_starship } from '../../constants/images';
+import { mks_1_starship, mks_1_mks } from '../../constants/images';
 
-const MksCircle = ({children, onPressHandler, bottomText}) => {
+const MksCircle = ({children, onPressHandler, bottomText, mks}) => {
     return (
 		<View>
 			<TouchableOpacity style={styles.button} onPress={onPressHandler}>
 				{children}
-				<Image style={{position: 'absolute', width: 50, height: 28}} source={mks_1_starship}/>
+				<Image style={{position: 'absolute', width: 50, height: 28}} source={mks ? mks_1_mks : mks_1_starship}/>
 			</TouchableOpacity>
 			<Text style={styles.buttonText}>{bottomText}</Text>
 		</View>
