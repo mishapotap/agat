@@ -21,9 +21,9 @@ const ResearchBase_Block_2 = ({navigation, baseUrl, filteredItems}) => {
                     </Text>
                 </TouchableOpacity>
             ))}
-            <TouchableOpacity style={styles.button} onPress={() => {}}>
+            {/* <TouchableOpacity style={styles.button} onPress={() => {}}>
                 <Text style={styles.buttonText}>Загрузить ещё</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
         </View>
     )
 }

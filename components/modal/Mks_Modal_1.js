@@ -18,7 +18,7 @@ const Mks_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
         <Modal
         statusBarTranslucent={true}
         animationType="slide"
-        transparent={true}
+        transparent={false}
         visible={modalVisible}
         supportedOrientations={["landscape"]}
         onRequestClose={() => {
@@ -86,7 +86,7 @@ const Mks_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
                             </TouchableOpacity>
                             <Video
                                 style={styles.videoBackground}
-                                source={require("../../assets/video/main.mp4")}
+                                source={require("../../assets/video/mks.mp4")}
                                 resizeMode="cover"
                                 useNativeControls
                                 isLooping={true}
@@ -128,7 +128,8 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
-        backgroundColor: 'rgba(17, 24, 37, 0.9)',
+        // backgroundColor: 'rgba(17, 24, 37, 0.9)',
+        backgroundColor: '#000000',
         paddingVertical: 20,
         paddingHorizontal: 35,
         paddingTop: StatusBar.currentHeight,

@@ -514,8 +514,8 @@ const mksAboutInfo = {
 	name: "Международная космическая станция",
 	content: [
 		{
-		slug: "moduleImage",
-		value: require("../assets/images/MksModal/main/modal-01.jpg"),
+		slug: "moduleVideo",
+		value: require("../assets/images/MksModal/main/ISS.mp4"),
 		},
 		{
 		slug: "heading",
@@ -558,8 +558,8 @@ const mksStructure = [
 		name: "Функционально-грузовой блок «Заря»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/1/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/1/1_Zarya.mp4"),
 			},
 			{
 			slug: "heading",
@@ -623,8 +623,8 @@ const mksStructure = [
 		name: "Соединительный модуль «Юнити»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/2/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/2/2_Unity.mp4"),
 			},
 			{
 			slug: "heading",
@@ -653,8 +653,8 @@ const mksStructure = [
 		name: "Служебный модуль «Звезда»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/3/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/3/3_Zvezda.mp4"),
 			},
 			{
 			slug: "heading",
@@ -725,8 +725,8 @@ const mksStructure = [
 		name: "Лабораторный модуль «Дестини»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/4/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/4/4_Destiny.mp4"),
 			},
 			{
 			slug: "heading",
@@ -759,8 +759,8 @@ const mksStructure = [
 		name: "Шлюзовая камера «Квест»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/5/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/5/5_Quest.mp4"),
 			},
 			{
 			slug: "heading",
@@ -801,8 +801,8 @@ const mksStructure = [
 		name: "Соединительный модуль «Гармония»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/6/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/6/6_Harmony.mp4"),
 			},
 			{
 			slug: "heading",
@@ -831,8 +831,8 @@ const mksStructure = [
 		name: "Лабораторный модуль «Коламбус»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/7/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/7/7_Columbus.mp4"),
 			},
 			{
 			slug: "heading",
@@ -865,8 +865,8 @@ const mksStructure = [
 		name: "Грузовой модуль (1-й доставленный элемент модуля «Кибо»)",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/8/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/8/8_KiboLogistics.mp4"),
 			},
 			{
 			slug: "heading",
@@ -895,8 +895,8 @@ const mksStructure = [
 		name: "Научно-исследовательский модуль «Кибо»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/9/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/9/9_KiboLab.mp4"),
 			},
 			{
 			slug: "heading",
@@ -941,8 +941,8 @@ const mksStructure = [
 		name: "Малый исследовательский модуль «Поиск»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/10/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/10/10_Poisk.mp4"),
 			},
 			{
 			slug: "heading",
@@ -1010,8 +1010,8 @@ const mksStructure = [
 		name: "Жилой модуль «Транквилити»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/11/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/11/11_Tranquility.mp4"),
 			},
 			{
 			slug: "heading",
@@ -1048,8 +1048,8 @@ const mksStructure = [
 		name: "Обзорный модуль «Купола»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/12/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/12/12_Cupola.mp4"),
 			},
 			{
 			slug: "heading",
@@ -1086,8 +1086,8 @@ const mksStructure = [
 		name: "Малый исследовательский модуль «Рассвет»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/13/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/13/13_Rassvet.mp4"),
 			},
 			{
 			slug: "heading",
@@ -1157,8 +1157,8 @@ const mksStructure = [
 		name: "Многофункциональный модуль «Леонардо»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/14/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/14/14_Leonardo.mp4"),
 			},
 			{
 			slug: "heading",
@@ -1189,14 +1189,20 @@ const mksStructure = [
 	{
 		id: 15,
 		name: "Научно-энергетический модуль (ЭНМ)",
+		content: [
+			{
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/15/15_NEM.mp4"),
+			},
+		]
 	},
 	{
 		id: 16,
 		name: "Многоцелевой исследовательский модуль «Наука»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/16/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/16/16_Nauka.mp4"),
 			},
 			{
 			slug: "heading",
@@ -1314,8 +1320,8 @@ const mksStructure = [
 		name: "Узловой модуль «Причал»",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/MksModal/17/modal-01.jpg"),
+			slug: "moduleVideo",
+			value: require("../assets/images/MksModal/17/17_Prichal.mp4"),
 			},
 			{
 			slug: "heading",
@@ -1426,8 +1432,8 @@ const scienceAboutInfo = {
 	name: "Многоцелевой исследовательский модуль «Наука»",
 	content: [
 		{
-		slug: "moduleImage",
-		value: require("../assets/images/ScienceModal/main/modal-01.jpg"),
+		slug: "moduleVideo",
+		value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
 		},
 		{
 		slug: "heading",
@@ -1547,9 +1553,9 @@ const scienceStructure = [
 		name: "Пассивный стыковочный агрегат",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/1/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Пассивный стыковочный аппарат"
@@ -1565,9 +1571,9 @@ const scienceStructure = [
 		name: "Антенны Курс-П",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/2/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Антенны Курс-П"
@@ -1583,9 +1589,9 @@ const scienceStructure = [
 		name: "Иллюминатор",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/3/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Иллюминатор"
@@ -1605,9 +1611,9 @@ const scienceStructure = [
 		name: "Шлюзовая камера (ШК)",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/4/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Шлюзовая камера (ШК)"
@@ -1627,9 +1633,9 @@ const scienceStructure = [
 		name: "Средства крепления крупногабаритных объектов (СККО)",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/5/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Средства крепления крупногабаритных объектов (СККО)"
@@ -1645,9 +1651,9 @@ const scienceStructure = [
 		name: "Платформа для установки научного оборудования",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/6/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Платформа для установки научного оборудования"
@@ -1663,9 +1669,9 @@ const scienceStructure = [
 		name: "Переносное рабочее место (ПРМ)",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/7/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Переносное рабочее место"
@@ -1681,9 +1687,9 @@ const scienceStructure = [
 		name: "Блоки двигателей",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/8/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Грузовой модуль (1-й доставленный элемент модуля «Кибо»)"
@@ -1711,9 +1717,9 @@ const scienceStructure = [
 		name: "Манипулятор ERA",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/9/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Манипулятор ERA"
@@ -1729,9 +1735,9 @@ const scienceStructure = [
 		name: "Топливные баки",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/10/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Топливные баки"
@@ -1751,9 +1757,9 @@ const scienceStructure = [
 		name: "Солнечная батарея",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/11/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Солнечные батареи"
@@ -1773,9 +1779,9 @@ const scienceStructure = [
 		name: "Радиационный теплообменник дополнительный (РТОд)",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/12/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Радиационный теплообменник дополнительный (РТОд)"
@@ -1795,9 +1801,9 @@ const scienceStructure = [
 		name: "Антенны Курс-А",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/13/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Антенны Курс-А"
@@ -1813,9 +1819,9 @@ const scienceStructure = [
 		name: "Активный стыковочный агрегат",
 		content: [
 			{
-			slug: "moduleImage",
-			value: require("../assets/images/ScienceModal/14/modal-01.jpg"),
-			},
+				slug: "moduleVideo",
+				value: require("../assets/images/MksModal/main/16_Nauka.mp4"),
+				},
 			{
 			slug: "heading",
 			value: "Активный стыковочный аппарат"
