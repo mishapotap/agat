@@ -20,15 +20,20 @@ const ResearchBase_Block_1 = ({items, info, setFilteredItems}) => {
             <View style={styles.container}>
                 <Text style={styles.title}>База данных{"\n"}экспериментов</Text>
                 <View style={{flexDirection: 'row'}}>
-                    <View style={{width: '50%'}}>
-                        <Text style={styles.current}>Текущие</Text>
+                    <View style={{width: '33%'}}>
+                        <Text style={styles.current}>Реализуется</Text>
                         <View style={styles.hr}></View>
                         <Text style={styles.count}>{info?.CURRENT?.PUBLIC}</Text>
                     </View>
-                    <View style={{width: '50%'}}>
-                        <Text style={styles.current}>Завершенные</Text>
+                    <View style={{width: '33%'}}>
+                        <Text style={styles.current}>Завершенных</Text>
                         <View style={styles.hr}></View>
                         <Text style={styles.count}>{info?.COMPLETED?.PUBLIC}</Text>
+                    </View>
+                    <View style={{width: '33%'}}>
+                        <Text style={styles.current}>Планируется</Text>
+                        <View style={styles.hr}></View>
+                        <Text style={styles.count}>{info?.PLANNED?.PUBLIC}</Text>
                     </View>
                 </View>
             </View>
@@ -61,7 +66,7 @@ const styles = StyleSheet.create({
         color: COLORS.white,
     },
     container: {
-        width: 300,
+        width: 390,
         margin: 60,
     },
     title: {

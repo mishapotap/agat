@@ -57,10 +57,10 @@ const Experiment = ({route, navigation}) => {
                         <Experiment_Modal modalVisible={modalInfo} setModalVisible={setModalInfo} data={modal}/>
                         <View style={styles.buttons}>
                             <TouchableOpacity disabled onPress={() => navigation.goBack()}>
-                                <Modal_PlayButton />
+                                <Modal_PlayButton disabled/>
                             </TouchableOpacity>
                             <TouchableOpacity disabled onPress={() => navigation.goBack()}>
-                                <Modal_PhotoButton />
+                                <Modal_PhotoButton disabled/>
                             </TouchableOpacity> 
                             <TouchableOpacity onPress={() => navigation.goBack()}>
                                 <Modal_BackButton />

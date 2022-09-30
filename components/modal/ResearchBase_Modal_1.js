@@ -36,7 +36,7 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFiltere
 							<View style={styles.topBox}>
 								{active === "Реализуется" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />} 
 							</View>
-							<Text style={styles.text}>Текущие</Text>
+							<Text style={styles.text}>Реализуются</Text>
 						</View>
 					</TouchableOpacity>
 					{/* <TouchableOpacity onPress={() => { setActive("Завершен"); setFilteredItems([]); setModalVisible(!modalVisible);}}> */}
@@ -46,6 +46,15 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFiltere
 							{active === "Завершен" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />}
 							</View>
 							<Text style={styles.text}>Завершенные</Text>
+						</View>
+					</TouchableOpacity>
+					{/* Планируемые */}
+					<TouchableOpacity onPressIn={() => { setActive("Планируется")}}>
+						<View style={styles.item}>
+							<View style={styles.topBox}>
+							{active === "Планируется" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />}
+							</View>
+							<Text style={styles.text}>Планируемые</Text>
 						</View>
 					</TouchableOpacity>
 					<View style={styles.hr}></View>
@@ -86,16 +95,18 @@ const styles = StyleSheet.create({
 		zIndex: 10,
 	},
 	container: {
-		width: 500,
+		width: 660,
 		flexDirection: "row",
 		flexWrap: "wrap",
+		// backgroundColor: 'red',
 	},
 	item: {
-		width: 250,
+		width: 220,
 		flexDirection: "row",
 		justifyContent: "space-between",
 		alignItems: "center",
 		padding: 10,
+		// backgroundColor: 'yellow',
 	},
 	hr: {
 		height: StyleSheet.hairlineWidth,
@@ -120,7 +131,7 @@ const styles = StyleSheet.create({
 	},
 	text: {
 		marginLeft: 15,
-		width: 170,
+		width: 140,
 		// text
 		fontWeight: "500",
 		fontSize: 11,

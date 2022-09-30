@@ -15,7 +15,7 @@ const Mks = ({route, navigation}) => {
 			<ImageBackground style={styles.background} resizeMode={"stretch"} source={mks_1_background}>
 				<View style={styles.content}>
 
-					<View style={{alignItems: 'flex-start', marginTop: 20, marginLeft: 20, zIndex: 1}}>
+					{/* <View style={{alignItems: 'flex-start', marginTop: 20, marginLeft: 20, zIndex: 1}}>
 						<Text style={styles.headerText}><Text style={{color: "#0066FF"}}>«МКС»</Text> — пилотируемая орбитальная станция.</Text>
 					</View>
 
@@ -25,13 +25,14 @@ const Mks = ({route, navigation}) => {
 
 					<TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
 						<Mks_1_BackButton/>
-					</TouchableOpacity>
+					</TouchableOpacity> */}
 
 					<View style={{position: 'absolute', height: SIZES.height, width: SIZES.width}}>
-						<WebView source={{ uri: 'http://mks.avt.promo/ISS/ISS.html'}} />
+						<WebView source={{ uri: 'https://agat.avt.promo/mobile/#mks'}} />
+						{/* <WebView source={{ uri: 'http://localhost:3000/mks/#mks'}} /> */}
 					</View>
 
-					<View style={{position: 'absolute', bottom: 25, left: 90}}>
+					{/* <View style={{position: 'absolute', bottom: 25, left: 90}}>
 						<MksCircle bottomText={"МКС"} mks={true}>
 							<Mks_1_PageButton_White/>
 						</MksCircle>
@@ -49,7 +50,7 @@ const Mks = ({route, navigation}) => {
 						</MksButton>
 					</View>
 						
-					<Mks_Modal_1 modalVisible={modalMks} setModalVisible={setModalMks} navigation={navigation}/>
+					<Mks_Modal_1 modalVisible={modalMks} setModalVisible={setModalMks} navigation={navigation}/> */}
 
 				</View>
 			</ImageBackground>

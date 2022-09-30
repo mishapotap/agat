@@ -8,7 +8,7 @@ const ResearchBlock_4 = ({navigation}) => {
         <View style={styles.content}>
                 <View style={styles.block}>
                     <Text style={styles.text}>Космические исследования и эксперименты проводятся на Российском сегменте Международной космической станции</Text>
-                    <TouchableOpacity onPress={() => navigation.navigate('Mks')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('MksScreens')}>
                         <Research_4_icon/>
                     </TouchableOpacity>
                 </View>
