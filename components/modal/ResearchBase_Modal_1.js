@@ -2,18 +2,28 @@ import React, { useState } from "react";
 import { Modal, StyleSheet, Text, View, TouchableOpacity, StatusBar } from "react-native";
 import { COLORS, dummyData } from "../../constants";
 import { Modal_BackButton, Modal_CheckBox, Modal_CheckBox_disabled } from "../../assets/svg";
+import { useEffect } from "react";
 
 const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFilteredItems }) => {
 
-	const [active, setActive] = useState('Завершен');
+	const [activeStatus, setActiveStatus] = useState();
+	const [activeIcon, setActiveIcon] = useState();
 
-	const filterArray = (filter) => {
+	const filterArray = () => {
 		setFilteredItems(
 			items.filter((item) => {
-				return item?.PROPERTIES?.spisoknapravisled === filter && item?.PROPERTIES?.statusexp === active 
+				return item?.PROPERTIES?.spisoknapravisled === activeIcon && item?.PROPERTIES?.statusexp === activeStatus 
 			})
 		);
 	};
+
+	useEffect(() => {
+		if (activeStatus && activeIcon) {
+			filterArray()
+			setModalVisible(!modalVisible)
+		}
+	}, [activeStatus, activeIcon])
+
 
 	return (
 		<Modal
@@ -31,28 +41,28 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFiltere
 					<Modal_BackButton />
 				</TouchableOpacity>
 				<View style={styles.container}>
-					<TouchableOpacity onPressIn={() => {setActive("Реализуется")}}>
+					<TouchableOpacity onPressIn={() => setActiveStatus("Реализуется")}>
 						<View style={styles.item}>
 							<View style={styles.topBox}>
-								{active === "Реализуется" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />} 
+								{activeStatus === "Реализуется" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />} 
 							</View>
 							<Text style={styles.text}>Реализуются</Text>
 						</View>
 					</TouchableOpacity>
 					{/* <TouchableOpacity onPress={() => { setActive("Завершен"); setFilteredItems([]); setModalVisible(!modalVisible);}}> */}
-					<TouchableOpacity onPressIn={() => { setActive("Завершен")}}>
+					<TouchableOpacity onPressIn={() => setActiveStatus("Завершен")}>
 						<View style={styles.item}>
 							<View style={styles.topBox}>
-							{active === "Завершен" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />}
+							{activeStatus === "Завершен" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />}
 							</View>
 							<Text style={styles.text}>Завершенные</Text>
 						</View>
 					</TouchableOpacity>
 					{/* Планируемые */}
-					<TouchableOpacity onPressIn={() => { setActive("Планируется")}}>
+					<TouchableOpacity onPressIn={() => setActiveStatus("Планируется")}>
 						<View style={styles.item}>
 							<View style={styles.topBox}>
-							{active === "Планируется" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />}
+							{activeStatus === "Планируется" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />}
 							</View>
 							<Text style={styles.text}>Планируемые</Text>
 						</View>
@@ -63,16 +73,27 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFiltere
 						<TouchableOpacity
 							key={filter.id}
 							onPress={() => {
-								filterArray(filter.name);
-								setModalVisible(!modalVisible);
+								setActiveIcon(filter.name)
+								// filterArray(filter.name);
+								// setModalVisible(!modalVisible);
 							}}
 						>
 							<View style={styles.item}>
-								<View style={styles.box}>{filter.icon}</View>
+								<View style={[styles.box, activeIcon === filter.name && {backgroundColor: '#00AAFF'}]}>{filter.icon}</View>
 								<Text style={styles.text}>{filter.name}</Text>
 							</View>
 						</TouchableOpacity>
 					))}
+					<TouchableOpacity style={styles.buttonWrapper} onPress={() => {
+								setActiveStatus()
+								setActiveIcon()
+								setFilteredItems(items)
+								setModalVisible(!modalVisible)
+							}}>
+						<View style={styles.button}>
+							<Text style={styles.buttonText}>Сбросить фильтра</Text>
+						</View>
+					</TouchableOpacity>
 				</View>
 			</View>
 		</Modal>
@@ -138,6 +159,27 @@ const styles = StyleSheet.create({
 		lineHeight: 15,
 		color: COLORS.white,
 	},
+	buttonWrapper: {
+		width: '100%',
+		marginTop: 10,
+	},
+	buttonText: {
+		// text
+		fontWeight: "500",
+		fontSize: 11,
+		lineHeight: 15,
+		color: COLORS.white,
+	},
+	button: {
+		justifyContent: 'center',
+		alignItems: 'center',
+		alignSelf: 'center',
+		width: 200,
+		height: 35,
+		borderRadius: 15,
+		borderWidth: StyleSheet.hairlineWidth,
+		borderColor: COLORS.white,
+	}
 });
 
 export default ResearchBase_Modal_1;

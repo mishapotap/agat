@@ -11,12 +11,10 @@ const ResearchBase_Block_1 = ({items, info, setFilteredItems}) => {
     return (
         <View style={styles.content}>
             <ResearchBase_Modal_1 modalVisible={modalSwitch} setModalVisible={setModalSwitch} items={items} setFilteredItems={setFilteredItems}/>
-            <View style={styles.switch}>
+            <TouchableOpacity style={styles.switch} onPress={() => setModalSwitch(true)}>
                 <Text style={styles.text}>Выбор направления</Text>
-                <TouchableOpacity onPress={() => setModalSwitch(true)}>
-                    <ResearchBase_Filter/>
-                </TouchableOpacity>
-            </View>
+                <ResearchBase_Filter/>
+            </TouchableOpacity>
             <View style={styles.container}>
                 <Text style={styles.title}>База данных{"\n"}экспериментов</Text>
                 <View style={{flexDirection: 'row'}}>
@@ -53,12 +51,12 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: 'space-between',
         alignItems: 'center',
-        width: 200,
         position: 'absolute',
         top: 30,
         right: 30,
     },
     text: {
+        marginRight: 5,
         // text
         fontWeight: '700',
         fontSize: 11,

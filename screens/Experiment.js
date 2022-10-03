@@ -56,12 +56,12 @@ const Experiment = ({route, navigation}) => {
                     <View style={styles.contentTwo}>
                         <Experiment_Modal modalVisible={modalInfo} setModalVisible={setModalInfo} data={modal}/>
                         <View style={styles.buttons}>
-                            <TouchableOpacity disabled onPress={() => navigation.goBack()}>
+                            {/* <TouchableOpacity disabled onPress={() => navigation.goBack()}>
                                 <Modal_PlayButton disabled/>
                             </TouchableOpacity>
                             <TouchableOpacity disabled onPress={() => navigation.goBack()}>
                                 <Modal_PhotoButton disabled/>
-                            </TouchableOpacity> 
+                            </TouchableOpacity>  */}
                             <TouchableOpacity onPress={() => navigation.goBack()}>
                                 <Modal_BackButton />
                             </TouchableOpacity>
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
 		right: 40,
 		zIndex: 10,
         flexDirection: 'row',
-        width: 180,
+        // width: 180,
         justifyContent: 'space-between',
 	},
     contentOne: {
