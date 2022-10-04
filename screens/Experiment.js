@@ -52,7 +52,7 @@ const Experiment = ({route, navigation}) => {
                     </View>
 				</ImageBackground>
 
-				<View style={{width: SIZES.width, height: SIZES.height, backgroundColor: COLORS.white}}>
+				<View style={{width: SIZES.width, minHeight: SIZES.height, backgroundColor: COLORS.white}}>
                     <View style={styles.contentTwo}>
                         <Experiment_Modal modalVisible={modalInfo} setModalVisible={setModalInfo} data={modal}/>
                         <View style={styles.buttons}>
@@ -66,8 +66,8 @@ const Experiment = ({route, navigation}) => {
                                 <Modal_BackButton />
                             </TouchableOpacity>
                         </View>
-                        <View style={{marginLeft: 55}}>
-                            <View style={{marginBottom: 50, width: '80%'}}>
+                        <View style={{marginLeft: 25, width: '100%', minHeight: '100%', justifyContent: 'center'}}>
+                            <View style={styles.membersContainer}>
                                 <Text style={styles.membersKey}>Постановщик</Text>
                                 <Text style={styles.membersValue}>{item?.PROPERTIES?.organizpost}</Text>
                                 <Text style={styles.membersKey}>Организации участники</Text>
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     },
     contentTwo: {
         paddingLeft: 70,
-        height: SIZES.height,
+        minHeight: SIZES.height,
         flex: 1,
         justifyContent: 'center',
         // alignItems: 'center',
@@ -200,9 +200,13 @@ const styles = StyleSheet.create({
         letterSpacing: 0.3,
         color: COLORS.black
     },
+    membersContainer: {
+        marginBottom: 50,
+        width: '80%',
+    },
     modalContainer: {
         flexDirection: "row",
-        width: 450,
+        width: '80%',
         flexWrap: 'wrap',
     },
     modalButton: {

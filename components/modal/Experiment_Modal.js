@@ -2,9 +2,11 @@ import React from "react";
 import { Modal, StyleSheet, Text, Pressable, View, ScrollView, StatusBar } from "react-native";
 import { FONTS } from "../../constants";
 import { Modal_CloseButton } from "../../assets/svg";
+import HTMLView from 'react-native-htmlview';
 
 const Experiment_Modal = ({ modalVisible, setModalVisible, data }) => {
-	const deleteHTMLTags = /(\<(\/?[^>]+)>)/gm
+	// const deleteHTMLTags = /(\<(\/?[^>]+)>)/gm
+	const htmlContent = data?.text
 	return (
 		<Modal
 			statusBarTranslucent={true}
@@ -25,7 +27,8 @@ const Experiment_Modal = ({ modalVisible, setModalVisible, data }) => {
 						<Text style={flattenStyles.title}>{data?.name}</Text>
 					</View>
 					<View style={{ alignSelf: "center"}}>
-						<Text style={flattenStyles.paragraph}>{data?.text?.replace(deleteHTMLTags, " ")}</Text>
+						<HTMLView value={htmlContent}/>
+						{/* <Text style={flattenStyles.paragraph}>{data?.text?.replace(deleteHTMLTags, " ")}</Text> */}
 					</View>
 				</ScrollView>
 			</View>

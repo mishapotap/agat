@@ -83,14 +83,14 @@ const ScienceScreen_Modal_1 = ({modalVisible, setModalVisible, navigation}) => {
                             <TouchableOpacity style={styles.backButton2} activeOpacity={0.3} onPress={() => setVideoContent(!videoContent)}>
                                 <Mks_1_BackButton/>
                             </TouchableOpacity>
-                            <Video
+                            {/* <Video
                                 style={styles.videoBackground}
                                 source={require("../../assets/video/nauka.mp4")}
                                 resizeMode="cover"
                                 useNativeControls
                                 isLooping={true}
                                 shouldPlay={true}
-                            />
+                            /> */}
                         </>
                         ) : (
                         // Основное меню
