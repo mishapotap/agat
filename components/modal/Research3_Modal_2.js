@@ -34,10 +34,10 @@ const Research3_Modal_2 = ({ modalVisible, setModalVisible }) => {
 							</View>
 							<View style={styles.etapTimeline}>
 								{etap.content.map((item) => (
-									<View key={item.id} style={{flexDirection: "row", width: 160, height: 200, alignItems: (item.id % 2) ? 'flex-end' : 'flex-start'}}>
+									<View key={item.id} style={{flexDirection: "row", width: 170, height: 240, alignItems: (item.id % 2) ? 'flex-end' : 'flex-start'}}>
 										<Text style={styles.timelineItemNumber}>{item.id}</Text>
 										<Text style={styles.timelineText}>{item.text}</Text>
-										<View style={[styles.timelineHr, {top: (item.id % 2) ? null : 70, bottom: (item.id % 2) ? 70 : null}]}></View>
+										<View style={[styles.timelineHr, {top: (item.id % 2) ? null : 90, bottom: (item.id % 2) ? 90 : null}]}></View>
 										<View style={styles.timelineHrMain}></View>
 										<View style={styles.timelineCircle}></View>
 									</View>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
 	},
 	
 	timelineText: {
-		height: 70,
+		height: 90,
 		// text
 		fontWeight: '500',
 		fontSize: 11,
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
 	},
 	timelineHrMain: {
 		position: 'absolute',
-		top: 100,
+		top: 120,
 		width: '100%',
 		height: StyleSheet.hairlineWidth,
 		backgroundColor: COLORS.black,
@@ -127,14 +127,14 @@ const styles = StyleSheet.create({
 	timelineCircle: {
 		position: 'absolute',
 		left: 11.5,
-		top: 96.5,
+		top: 116.5,
 		width: 7,
 		height: 7,
 		borderRadius: 50,
 		backgroundColor: "#7D7D7D",
 	},
 	timelineItemNumber: {
-		height: 70,
+		height: 90,
 		marginRight: 10,
 		// text
 		fontWeight: '500',

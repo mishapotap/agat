@@ -59,7 +59,7 @@ const Research3_Modal_3 = ({ modalVisible, setModalVisible }) => {
 						<View style={styles.itemHeader}>
 							<Research_3_2 />
 							<View style={{ paddingLeft: 55, justifyContent: "center" }}>
-								<Text style={FONTS.modalTextBold}>«Организация «Агат»</Text>
+								<Text style={FONTS.modalTextBold}>АО «Организация «Агат»</Text>
 								<Pressable
 									onPress={() =>
 										Linking.openURL("https://www.agat-roscosmos.ru/")
@@ -89,7 +89,7 @@ const Research3_Modal_3 = ({ modalVisible, setModalVisible }) => {
 						<View style={styles.itemHeader}>
 							<Research_3_3 />
 							<View style={{ paddingLeft: 20, justifyContent: "center" }}>
-								<Text style={FONTS.modalTextBold}>Предприятия «ЦНИИмаш»</Text>
+								<Text style={FONTS.modalTextBold}>АО «ЦНИИмаш»</Text>
 								<Pressable
 									onPress={() => Linking.openURL("https://tsniimash.ru/#1")}
 								>
@@ -98,12 +98,12 @@ const Research3_Modal_3 = ({ modalVisible, setModalVisible }) => {
 							</View>
 						</View>
 						<Text style={flattenStyles.paragraph}>
-							Центральный научно-исследовательский институт машиностроения (ЦНИИмаш) –
-							головное предприятие Государственной корпорации по космической
-							деятельности «Роскосмос». ЦНИИмаш занимает ведущее положение в
-							космической инфраструктуре России.
+						Центральный научно-исследовательский институт машиностроения (ЦНИИмаш) – головное предприятие Государственной корпорации по космической деятельности «Роскосмос». ЦНИИмаш занимает ведущее положение в космической инфраструктуре России. Оснащён современным исследовательским оборудованием, уникальными испытательными стендами и установками, позволяющими осуществлять комплексные научные исследования и экспериментальную отработку ракетно-космической техники и её конверсионных образцов в интересах других отраслей.
 						</Text>
-						<Text style={flattenStyles.middle}>В состав предприятия входят:</Text>
+						<Text style={flattenStyles.paragraph}>
+						В составе ЦНИИмаш — крупнейшие научно-технические центры ракетно-космической промышленности: Центр управления полётами, Центр системного проектирования, Центр теплообмена и аэрогазодинамики, Центр прочности, Информационно-аналитический центр координатно-временного и навигационного обеспечения, Научно-технический Центр качества, надёжности и безопасности ракетно-космических систем, Центр пилотируемых программ, Главный информационно-аналитический центр Автоматизированной системы предупреждения об опасных ситуациях в околоземном космическом пространстве.
+						</Text>
+						{/* <Text style={flattenStyles.middle}>В состав предприятия входят:</Text>
 						<Text style={flattenStyles.paragraph}>
 							{"\u2022"} Центр управления полётами (ЦУП) – крупное
 							научно-исследовательское подразделение АО «ЦНИИмаш», базовый центр
@@ -112,13 +112,13 @@ const Research3_Modal_3 = ({ modalVisible, setModalVisible }) => {
 						<Text style={flattenStyles.paragraph}>
 							{"\u2022"} Филиал АО «ЦНИИмаш» «Научно-исследовательский институт
 							космоаэрогеологических методов».
-						</Text>
+						</Text> */}
 					</View>
 					<View style={styles.item}>
 						<View style={styles.itemHeader}>
 							<Research_3_4 />
 							<View style={{ paddingLeft: 20, justifyContent: "center" }}>
-								<Text style={FONTS.modalTextBold}>«РКК «Энергия»</Text>
+								<Text style={FONTS.modalTextBold}>ПАО «РКК «Энергия»</Text>
 								<Pressable
 									onPress={() => Linking.openURL("https://www.energia.ru/")}
 								>
