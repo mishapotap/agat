@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, ImageBackground, Image } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, ImageBackground, Image, StatusBar } from "react-native";
 import {COLORS, SIZES} from '../constants';
 import Layout from "../components/Layout";
 import { experiment_background } from "../constants/images";
-import { Modal_BackButton, Modal_PlayButton, Modal_PhotoButton} from "../assets/svg";
-import { Experiment_Modal } from "../components/modal";
+import { Modal_BackButton, Modal_PlayButton, Modal_PhotoButton, Mks_1_BackButton} from "../assets/svg";
+import { Experiment_Modal, Vimeo_Modal } from "../components/modal";
 
 
 const Experiment = ({route, navigation}) => {
@@ -12,25 +12,41 @@ const Experiment = ({route, navigation}) => {
     const {url} = route.params;
     const [item, setItem] = useState([]);
     const [modalInfo, setModalInfo] = useState(false);
+    const [modalVideo, setModalVideo] = useState(false);
+    const [videoLink, setVideoLink] = useState();
+    const [showVideoButton, setShowVideoButton] = useState(false);
     const [modal, setModal] = useState({});
 
+
     useEffect(() => {
-        let isMounted = true;
+        // let isMounted = true;
         fetch(`${baseUrl}${url}`)
             .then(res => res.json())
             .then((result) => {
-                if (isMounted)
+                // if (isMounted)
                 setItem(result.ITEMS)
+                if (result.ITEMS.PROPERTIES.IFRAME_VIDEO_LINK !== undefined) {
+                    setShowVideoButton(true);
+                    // Получил подстроку с ссылкой на vimeo
+                    setVideoLink(result.ITEMS.PROPERTIES.IFRAME_VIDEO_LINK.slice(13, 53))
+                }
             },
             (error) => {
                 alert(JSON.stringify(error));
                 }
             )
+            // .then(() => {
+            //     (!videoLink && item?.PROPERTIES?.IFRAME_VIDEO_LINK) && setVideoLink(item.PROPERTIES.IFRAME_VIDEO_LINK)
+            // })
+            // .then(() => {
+            //     console.log(videoLink);
+            // })
         }, [])
-
-	return (
+        
+        return (
 		<Layout>
 			<ScrollView showsVerticalScrollIndicator={false}>
+
 				<ImageBackground style={styles.background} source={experiment_background}>
 					<View style={styles.contentOne}>
                         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
@@ -54,12 +70,14 @@ const Experiment = ({route, navigation}) => {
 
 				<View style={{width: SIZES.width, minHeight: SIZES.height, backgroundColor: COLORS.white}}>
                     <View style={styles.contentTwo}>
+                        <Vimeo_Modal modalVisible={modalVideo} setModalVisible={setModalVideo} data={videoLink}/>
                         <Experiment_Modal modalVisible={modalInfo} setModalVisible={setModalInfo} data={modal}/>
                         <View style={styles.buttons}>
-                            {/* <TouchableOpacity disabled onPress={() => navigation.goBack()}>
-                                <Modal_PlayButton disabled/>
+                            <TouchableOpacity disabled={!showVideoButton} onPress={() => {
+                                    setModalVideo(!modalVideo)}}>
+                                <Modal_PlayButton disabled={!showVideoButton}/>
                             </TouchableOpacity>
-                            <TouchableOpacity disabled onPress={() => navigation.goBack()}>
+                            {/* <TouchableOpacity disabled onPress={() => navigation.goBack()}>
                                 <Modal_PhotoButton disabled/>
                             </TouchableOpacity>  */}
                             <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -111,6 +129,7 @@ const styles = StyleSheet.create({
 		zIndex: 10,
         flexDirection: 'row',
         // width: 180,
+        width: 120,
         justifyContent: 'space-between',
 	},
     contentOne: {

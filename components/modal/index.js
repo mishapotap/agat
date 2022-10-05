@@ -12,6 +12,7 @@ import Research3_Modal_4 from "./Research3_Modal_4";
 import ResearchBase_Modal_1 from "./ResearchBase_Modal_1";
 
 import Experiment_Modal from "./Experiment_Modal";
+import Vimeo_Modal from "./Vimeo_Modal";
 
 import Mks_Modal_1 from "./Mks_Modal_1";
 import ScienceScreen_Modal_1 from "./ScienceScreen_Modal_1";
@@ -30,6 +31,7 @@ export {
 
     ResearchBase_Modal_1,
     
+    Vimeo_Modal,
     Experiment_Modal,
 
     Mks_Modal_1,
