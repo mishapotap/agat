@@ -4,7 +4,7 @@ import {COLORS, SIZES} from '../constants';
 import Layout from "../components/Layout";
 import { experiment_background } from "../constants/images";
 import { Modal_BackButton, Modal_PlayButton, Modal_PhotoButton, Mks_1_BackButton} from "../assets/svg";
-import { Experiment_Modal, Vimeo_Modal } from "../components/modal";
+import { Experiment_Modal, Photo_Modal, Vimeo_Modal } from "../components/modal";
 
 
 const Experiment = ({route, navigation}) => {
@@ -13,8 +13,14 @@ const Experiment = ({route, navigation}) => {
     const [item, setItem] = useState([]);
     const [modalInfo, setModalInfo] = useState(false);
     const [modalVideo, setModalVideo] = useState(false);
+    const [modalPhoto, setModalPhoto] = useState(false);
+    // video
     const [videoLink, setVideoLink] = useState();
     const [showVideoButton, setShowVideoButton] = useState(false);
+    // photo
+    const [photoData, setPhotoData] = useState();
+    const [showPhotoButton, setShowPhotoButton] = useState(false);
+
     const [modal, setModal] = useState({});
 
 
@@ -30,17 +36,16 @@ const Experiment = ({route, navigation}) => {
                     // Получил подстроку с ссылкой на vimeo
                     setVideoLink(result.ITEMS.PROPERTIES.IFRAME_VIDEO_LINK.slice(13, 53))
                 }
+                if (result.ITEMS.PROPERTIES.PICTURES !== undefined) {
+                    setShowPhotoButton(true);
+                    // Получил подстроку с ссылкой на vimeo
+                    setPhotoData(result.ITEMS.PROPERTIES.PICTURES)
+                }
             },
             (error) => {
                 alert(JSON.stringify(error));
                 }
             )
-            // .then(() => {
-            //     (!videoLink && item?.PROPERTIES?.IFRAME_VIDEO_LINK) && setVideoLink(item.PROPERTIES.IFRAME_VIDEO_LINK)
-            // })
-            // .then(() => {
-            //     console.log(videoLink);
-            // })
         }, [])
         
         return (
@@ -70,6 +75,7 @@ const Experiment = ({route, navigation}) => {
 
 				<View style={{width: SIZES.width, minHeight: SIZES.height, backgroundColor: COLORS.white}}>
                     <View style={styles.contentTwo}>
+                        <Photo_Modal modalVisible={modalPhoto} setModalVisible={setModalPhoto} data={photoData}/>
                         <Vimeo_Modal modalVisible={modalVideo} setModalVisible={setModalVideo} data={videoLink}/>
                         <Experiment_Modal modalVisible={modalInfo} setModalVisible={setModalInfo} data={modal}/>
                         <View style={styles.buttons}>
@@ -77,14 +83,15 @@ const Experiment = ({route, navigation}) => {
                                     setModalVideo(!modalVideo)}}>
                                 <Modal_PlayButton disabled={!showVideoButton}/>
                             </TouchableOpacity>
-                            {/* <TouchableOpacity disabled onPress={() => navigation.goBack()}>
-                                <Modal_PhotoButton disabled/>
-                            </TouchableOpacity>  */}
+                            <TouchableOpacity disabled={!showPhotoButton} onPress={() => {
+                                    setModalPhoto(!modalPhoto)}}>
+                                <Modal_PhotoButton disabled={!showPhotoButton}/>
+                            </TouchableOpacity>
                             <TouchableOpacity onPress={() => navigation.goBack()}>
                                 <Modal_BackButton />
                             </TouchableOpacity>
                         </View>
-                        <View style={{marginLeft: 25, width: '100%', minHeight: '100%', justifyContent: 'center'}}>
+                        <View style={{marginLeft: 25, marginVertical: 50, width: '100%', minHeight: '100%', justifyContent: 'center'}}>
                             <View style={styles.membersContainer}>
                                 <Text style={styles.membersKey}>Постановщик</Text>
                                 <Text style={styles.membersValue}>{item?.PROPERTIES?.organizpost}</Text>
@@ -128,8 +135,7 @@ const styles = StyleSheet.create({
 		right: 40,
 		zIndex: 10,
         flexDirection: 'row',
-        // width: 180,
-        width: 120,
+        width: 180,
         justifyContent: 'space-between',
 	},
     contentOne: {

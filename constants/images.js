@@ -19,6 +19,7 @@ const mks_1_starship = require('../assets/images/mks_1_starship.png')
 const mks_1_starship_left = require('../assets/images/mks_1_starship_left.png')
 const mks_1_starship_right = require('../assets/images/mks_1_starship_right.png')
 const mks_1_mks = require('../assets/images/mks_1_mks.png')
+const preview_base = require('../assets/images/preview_base.png')
 
 export {
     about_1_background,
@@ -42,4 +43,5 @@ export {
     mks_1_starship_left,
     mks_1_starship_right,
     mks_1_mks,
+    preview_base,
 }

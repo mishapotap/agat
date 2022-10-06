@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import {COLORS, SIZES} from '../constants';
+import { preview_base } from "../constants/images";
 
 const ResearchBase_Block_2 = ({navigation, baseUrl, filteredItems}) => {
     
@@ -8,7 +9,7 @@ const ResearchBase_Block_2 = ({navigation, baseUrl, filteredItems}) => {
         <View style={styles.content}>
             {filteredItems.map(item => (
                 <TouchableOpacity key={item.ID} style={styles.item} onPress={() => navigation.navigate('Experiment', {url: item.DETAIL_PAGE_URL})}>
-                    <Image style={styles.image} source={{uri:`${baseUrl}${item.PREVIEW_PICTURE}`}}/>
+                    <Image style={styles.image} source={item.PREVIEW_PICTURE ? {uri:`${baseUrl}${item.PREVIEW_PICTURE}`} : preview_base}/>
                     <View style={styles.imageLayer}></View>
                     <View style={styles.filter}>
                         <Image style={{width: 53, height: 53, marginRight: 20}} source={{uri:`${baseUrl}${item?.PROPERTIES?.spisoknapravisledicon}`}}/>

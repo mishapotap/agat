@@ -40,6 +40,9 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFiltere
 				<TouchableOpacity style={styles.close} onPress={() => setModalVisible(!modalVisible)}>
 					<Modal_BackButton />
 				</TouchableOpacity>
+				<View style={styles.title}>
+					<Text style={styles.titleText}>Укажите статус и направление исследований</Text>
+				</View>
 				<View style={styles.container}>
 					<TouchableOpacity onPressIn={() => setActiveStatus("Реализуется")}>
 						<View style={styles.item}>
@@ -179,6 +182,17 @@ const styles = StyleSheet.create({
 		borderRadius: 15,
 		borderWidth: StyleSheet.hairlineWidth,
 		borderColor: COLORS.white,
+	},
+	title: {
+		width: '100%',
+		alignItems: 'center',
+	},
+	titleText: {
+		// text
+		fontWeight: "500",
+		fontSize: 18,
+		lineHeight: 18,
+		color: COLORS.white,
 	}
 });
 
