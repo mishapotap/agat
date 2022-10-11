@@ -10,9 +10,17 @@ import { WebView } from 'react-native-webview';
 
 const Mks = ({route, navigation}) => {
 	const [modalMks, setModalMks] = useState(false);
+	const Error = () => {
+		return (
+			<View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: COLORS.black}}>
+				<Text style={{fontSize: 15, color: COLORS.white, marginBottom: 10}}>Нет доступа к данному разделу</Text>
+				<Text style={{fontSize: 15, color: COLORS.white}}>Пожалуйста, проверьте подключение к сети</Text>
+			</View>
+		)
+	}
 	return (
 		<Layout>
-			<ImageBackground style={styles.background} resizeMode={"stretch"} source={mks_1_background}>
+			{/* <ImageBackground style={styles.background} resizeMode={"stretch"} source={mks_1_background}> */}
 				<View style={styles.content}>
 
 					{/* <View style={{alignItems: 'flex-start', marginTop: 20, marginLeft: 20, zIndex: 1}}>
@@ -28,7 +36,8 @@ const Mks = ({route, navigation}) => {
 					</TouchableOpacity> */}
 
 					<View style={{position: 'absolute', height: SIZES.height, width: SIZES.width}}>
-						<WebView source={{ uri: 'https://agat.avt.promo/mobile/#mks'}} />
+						<WebView source={{ uri: 'https://agat.avt.promo/mobile/#mks'}} renderError={() => <Error />}/>
+						{/* <Error /> */}
 						{/* <WebView source={{ uri: 'http://localhost:3000/mks/#mks'}} /> */}
 					</View>
 
@@ -53,7 +62,7 @@ const Mks = ({route, navigation}) => {
 					<Mks_Modal_1 modalVisible={modalMks} setModalVisible={setModalMks} navigation={navigation}/> */}
 
 				</View>
-			</ImageBackground>
+			{/* </ImageBackground> */}
         </Layout>
 	);
 };

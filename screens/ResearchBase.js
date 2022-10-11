@@ -15,18 +15,23 @@ const ResearchBase = () => {
     const baseUrl = 'https://agat.avt.promo';
 
 	useEffect(() => {
-		// let isMounted = true;
-        fetch(`${baseUrl}/api/baza-issledovaniy/?PAGEN_1=1`)
-        .then(res => res.json())
-        .then((result) => {
-			// if (isMounted)
-			setPageCount(result.NAV_PAGE_COUNT);
-			setInfo(result.INFO_COUNT);
-            },
-        (error) => {
-            alert(JSON.stringify(error));
-            }
-        )
+		try {
+			// let isMounted = true;
+			fetch(`${baseUrl}/api/baza-issledovaniy/?PAGEN_1=1`)
+			.then(res => res.json())
+			.then((result) => {
+				// if (isMounted)
+				setPageCount(result.NAV_PAGE_COUNT);
+				setInfo(result.INFO_COUNT);
+				},
+			(error) => {
+				// alert(JSON.stringify(error));
+				alert("Нет доступа к базе данных экспериментов. Пожалуйста, проверьте подключение к сети");
+				}
+			)
+		} catch (err) {
+			alert("Нет доступа к базе данных экспериментов. Пожалуйста, проверьте подключение к сети");
+		}
     }, [])
 
 	useEffect(() => {

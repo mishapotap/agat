@@ -22,8 +22,8 @@ const Photo_Modal = ({ modalVisible, setModalVisible, data }) => {
                     </TouchableOpacity>
 					<ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{ width: "100%" }}>
 						<View style={styles.container}>
-							{data && data.map((image) => (
-								<View style={styles.item}>
+							{data && data.map((image, index) => (
+								<View style={styles.item} key={index}>
 									<Image source={{uri:`https://agat.avt.promo/${image.SRC}`}} style={styles.image}></Image>
 									<Text style={styles.text}>{image.DESCRIPTION}</Text>
 								</View>
