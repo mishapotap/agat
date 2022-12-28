@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, Image } from "react-native";
 import Layout from "../components/Layout";
 import { COLORS, SIZES } from "../constants";
@@ -7,17 +7,38 @@ import { Mks_1_BackButton, Mks_1_SoundButton, Mks_1_PageButton_White, Mks_1_Page
 import { MksButton, MksCircle } from "../components/content";
 import { Mks_Modal_1 } from "../components/modal";
 import { WebView } from 'react-native-webview';
+import NetInfo from '@react-native-community/netinfo';
+
 
 const Mks = ({route, navigation}) => {
-	const [modalMks, setModalMks] = useState(false);
+
+	// const [modalMks, setModalMks] = useState(false);
+	const [connected, setConnected] = useState(true)
+
+	useEffect(() => {
+		NetInfo.addEventListener(state => {
+			// console.log("Connection type", state.type);
+			// console.log("Is connected?", state.isConnected);
+			state.isConnected ? setConnected(true) : setConnected(false)
+		});
+	}, [connected])
+
+	// function timeout(ms) {
+	// 	return new Promise(resolve => setTimeout(resolve, ms));
+	// }
+
 	const Error = () => {
-		return (
-			<View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: COLORS.black}}>
-				<Text style={{fontSize: 15, color: COLORS.white, marginBottom: 10}}>Нет доступа к данному разделу</Text>
-				<Text style={{fontSize: 15, color: COLORS.white}}>Пожалуйста, проверьте подключение к сети</Text>
-			</View>
-		)
+		// if (!connected) {
+			return (
+				<View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: COLORS.black}}>
+					<Text style={{fontSize: 15, color: COLORS.white, marginBottom: 10}}>Нет доступа к данному разделу</Text>
+					<Text style={{fontSize: 15, color: COLORS.white}}>Пожалуйста, проверьте подключение к сети</Text>
+				</View>
+			)
+		// }
+		// return null
 	}
+
 	return (
 		<Layout>
 			{/* <ImageBackground style={styles.background} resizeMode={"stretch"} source={mks_1_background}> */}
@@ -36,7 +57,10 @@ const Mks = ({route, navigation}) => {
 					</TouchableOpacity> */}
 
 					<View style={{position: 'absolute', height: SIZES.height, width: SIZES.width}}>
-						<WebView source={{ uri: 'https://agat.avt.promo/mobile/#mks'}} renderError={() => <Error />}/>
+						{/*{connected ? <WebView source={{ uri: 'https://orbital-science.space/mobile/#mks'}} /> : <Error/>}*/}
+						{connected ? <WebView source={{ uri: 'https://orbital-science.space/mobile/#mks'}} /> : <Error/>}
+						{/*{!connected ? <Error/> : null}*/}
+						{/*<WebView source={{ uri: 'https://orbital-science.space/mobile/#mks'}} renderError={() => <Error />}/>*/}
 						{/* <Error /> */}
 						{/* <WebView source={{ uri: 'http://localhost:3000/mks/#mks'}} /> */}
 					</View>

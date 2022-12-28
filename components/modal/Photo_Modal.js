@@ -24,7 +24,7 @@ const Photo_Modal = ({ modalVisible, setModalVisible, data }) => {
 						<View style={styles.container}>
 							{data && data.map((image, index) => (
 								<View style={styles.item} key={index}>
-									<Image source={{uri:`https://agat.avt.promo/${image.SRC}`}} style={styles.image}></Image>
+									<Image source={{uri:`https://orbital-science.space/${image.SRC}`}} style={styles.image}></Image>
 									<Text style={styles.text}>{image.DESCRIPTION}</Text>
 								</View>
 							))}

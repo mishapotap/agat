@@ -12,7 +12,7 @@ const ResearchBase = () => {
     const [pageCount, setPageCount] = useState();
     const [info, setInfo] = useState([]);
     const [filteredItems, setFilteredItems] = useState([]);
-    const baseUrl = 'https://agat.avt.promo';
+    const baseUrl = 'https://orbital-science.space';
 
 	useEffect(() => {
 		try {
@@ -22,6 +22,7 @@ const ResearchBase = () => {
 			.then((result) => {
 				// if (isMounted)
 				setPageCount(result.NAV_PAGE_COUNT);
+				console.log(pageCount)
 				setInfo(result.INFO_COUNT);
 				},
 			(error) => {
@@ -36,7 +37,7 @@ const ResearchBase = () => {
 
 	useEffect(() => {
 		let array = []
-		let urls = new Array(pageCount).fill(1).map((element, index) => `https://agat.avt.promo/api/baza-issledovaniy/?PAGEN_1=${index+1}`);
+		let urls = new Array(pageCount).fill(1).map((element, index) => `https://orbital-science.space/api/baza-issledovaniy/?PAGEN_1=${index+1}`);
 		let requests = urls.map(url => fetch(url));
 		Promise.all(requests)
 		.then(responses => Promise.all(responses.map(r => r.json())))

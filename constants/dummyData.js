@@ -321,7 +321,7 @@ const research2 = [
 		name: 'Научно-\nфундаментальные',
 		icon: <Research_2_icon1/>,
 		content: {
-			uri: "http://agat.avt.promo/local/templates/cosmos/img/issledovaniya-01-nf.jpg",
+			uri: "https://orbital-science.space/local/templates/cosmos/img/issledovaniya-01-nf.jpg",
 			title: "Научно-фундаментальные",
 			icon: <Research_2_icon1 />,
 			text: "Это глубокое и всестороннее исследование с целью получения новых основополагающих знаний, а также с целью выяснения закономерностей изучаемых явлений.",
@@ -332,7 +332,7 @@ const research2 = [
 		name: "Технологические",
 		icon: <Research_2_icon2/>,
 		content: {
-			uri: "http://agat.avt.promo/local/templates/cosmos/img/issledovaniya-02-tech.jpg",
+			uri: "https://orbital-science.space/local/templates/cosmos/img/issledovaniya-02-tech.jpg",
 			title: "Технологические",
 			icon: <Research_2_icon2 />,
 			text: "Изучение элементов технологического процесса.",
@@ -343,7 +343,7 @@ const research2 = [
 		name: "Прикладные",
 		icon: <Research_2_icon3/>,
 		content: {
-			uri: "http://agat.avt.promo/local/templates/cosmos/img/issledovaniya-03-pr.jpg",
+			uri: "https://orbital-science.space/local/templates/cosmos/img/issledovaniya-03-pr.jpg",
 			title: "Прикладные",
 			icon: <Research_2_icon3 />,
 			text: "Используют достижения фундаментальной науки для решения практических задач. Результатом эксперимента является создание и совершенствование новых технологий.",
@@ -354,7 +354,7 @@ const research2 = [
 		name: "Образовательные",
 		icon: <Research_2_icon4/>,
 		content: {
-			uri: "http://agat.avt.promo/local/templates/cosmos/img/issledovaniya-04-obr.jpg",
+			uri: "https://orbital-science.space/local/templates/cosmos/img/issledovaniya-04-obr.jpg",
 			title: "Образовательные",
 			icon: <Research_2_icon4 />,
 			text: "Изучение исследования явлений и процессов для педагогической системы.",

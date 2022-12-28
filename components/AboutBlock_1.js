@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import {View, Text, StyleSheet, Pressable} from 'react-native'
+import {View, Text, StyleSheet, Pressable, TouchableOpacity} from 'react-native'
 import { COLORS, SIZES } from '../constants';
-import { About_1_arrow, About_1_1, About_1_2, About_1_3, About_1_4} from "../assets/svg";
+import {About_1_arrow, About_1_1, About_1_2, About_1_3, About_1_4, Home_2} from "../assets/svg";
+import * as Linking from "expo-linking";
 
 const AboutBlock_1 = () => {
     const [activeTab, setActiveTab] = useState('first');
@@ -48,10 +49,18 @@ const AboutBlock_1 = () => {
                     </View> : null}
                     {(activeTab === 'third') ? 
                     <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center'}}>
-                        <About_1_1/>
-                        <About_1_2/>
-                        <About_1_3/>
-                        <About_1_4/>
+						<TouchableOpacity onPressIn={() => Linking.openURL("https://www.roscosmos.ru/")}>
+							<About_1_1 />
+						</TouchableOpacity>
+						<TouchableOpacity onPressIn={() => Linking.openURL("https://agat-roscosmos.ru/")}>
+							<About_1_2/>
+						</TouchableOpacity>
+						<TouchableOpacity onPressIn={() => Linking.openURL("https://tsniimash.ru/")}>
+							<About_1_3 />
+						</TouchableOpacity>
+						<TouchableOpacity onPressIn={() => Linking.openURL("https://www.energia.ru/")}>
+							<About_1_4 />
+						</TouchableOpacity>
                     </View> : null}
                 </View>
             </View>

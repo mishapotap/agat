@@ -8,7 +8,7 @@ import { Experiment_Modal, Photo_Modal, Vimeo_Modal } from "../components/modal"
 
 
 const Experiment = ({route, navigation}) => {
-    const baseUrl = 'https://agat.avt.promo';
+    const baseUrl = 'https://orbital-science.space';
     const {url} = route.params;
     const [item, setItem] = useState([]);
     const [modalInfo, setModalInfo] = useState(false);
@@ -43,7 +43,7 @@ const Experiment = ({route, navigation}) => {
                 }
             },
             (error) => {
-                alert(JSON.stringify(error));
+                alert("Нет доступа к базе данных экспериментов. Пожалуйста, проверьте подключение к сети");
                 }
             )
         }, [])

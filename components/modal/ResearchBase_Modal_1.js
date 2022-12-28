@@ -8,22 +8,17 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFiltere
 
 	const [activeStatus, setActiveStatus] = useState();
 	const [activeIcon, setActiveIcon] = useState();
+	const [buttons] = useState([{id: 1, name:"Реализуется"}, {id: 2, name:"Завершен"}, {id: 3, name:"Планируется"}])
 
-	const filterArray = () => {
-		setFilteredItems(
-			items.filter((item) => {
-				return item?.PROPERTIES?.spisoknapravisled === activeIcon && item?.PROPERTIES?.statusexp === activeStatus 
-			})
-		);
-	};
-
-	useEffect(() => {
+	// Фильтрация массива и закрытие модалки если выбраны оба фильтра
+		useEffect(() => {
 		if (activeStatus && activeIcon) {
-			filterArray()
+			setFilteredItems(
+				items.filter(item => item?.PROPERTIES?.spisoknapravisled === activeIcon && item?.PROPERTIES?.statusexp === activeStatus)
+			);
 			setModalVisible(!modalVisible)
 		}
 	}, [activeStatus, activeIcon])
-
 
 	return (
 		<Modal
@@ -44,41 +39,26 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFiltere
 					<Text style={styles.titleText}>Укажите статус и направление исследований</Text>
 				</View>
 				<View style={styles.container}>
-					<TouchableOpacity onPressIn={() => setActiveStatus("Реализуется")}>
-						<View style={styles.item}>
-							<View style={styles.topBox}>
-								{activeStatus === "Реализуется" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />} 
+					{buttons.map((button) => (
+						<TouchableOpacity key={button.id} onPressIn={() => {
+							activeStatus === button.name ? setActiveStatus(null) : setActiveStatus(button.name)
+						}}>
+							<View style={styles.item}>
+								<View style={styles.topBox}>
+									{activeStatus === button.name ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />}
+								</View>
+								<Text style={styles.text}>{button.name}</Text>
 							</View>
-							<Text style={styles.text}>Реализуются</Text>
-						</View>
-					</TouchableOpacity>
-					{/* <TouchableOpacity onPress={() => { setActive("Завершен"); setFilteredItems([]); setModalVisible(!modalVisible);}}> */}
-					<TouchableOpacity onPressIn={() => setActiveStatus("Завершен")}>
-						<View style={styles.item}>
-							<View style={styles.topBox}>
-							{activeStatus === "Завершен" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />}
-							</View>
-							<Text style={styles.text}>Завершенные</Text>
-						</View>
-					</TouchableOpacity>
-					{/* Планируемые */}
-					<TouchableOpacity onPressIn={() => setActiveStatus("Планируется")}>
-						<View style={styles.item}>
-							<View style={styles.topBox}>
-							{activeStatus === "Планируется" ? <Modal_CheckBox /> : <Modal_CheckBox_disabled />}
-							</View>
-							<Text style={styles.text}>Планируемые</Text>
-						</View>
-					</TouchableOpacity>
+						</TouchableOpacity>
+					))}
+
 					<View style={styles.hr}></View>
 
 					{dummyData.filters.map((filter) => (
 						<TouchableOpacity
 							key={filter.id}
 							onPress={() => {
-								setActiveIcon(filter.name)
-								// filterArray(filter.name);
-								// setModalVisible(!modalVisible);
+								activeIcon === filter.name ? setActiveIcon(null) : setActiveIcon(filter.name)
 							}}
 						>
 							<View style={styles.item}>
@@ -88,13 +68,13 @@ const ResearchBase_Modal_1 = ({ modalVisible, setModalVisible, items, setFiltere
 						</TouchableOpacity>
 					))}
 					<TouchableOpacity style={styles.buttonWrapper} onPress={() => {
-								setActiveStatus()
-								setActiveIcon()
+								setActiveStatus(null)
+								setActiveIcon(null)
 								setFilteredItems(items)
 								setModalVisible(!modalVisible)
 							}}>
 						<View style={styles.button}>
-							<Text style={styles.buttonText}>Сбросить фильтра</Text>
+							<Text style={styles.buttonText}>Сбросить фильтры</Text>
 						</View>
 					</TouchableOpacity>
 				</View>

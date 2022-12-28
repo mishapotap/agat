@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import {View, Text, StyleSheet, TouchableOpacity} from "react-native";
 import { Home_1, Home_2 } from "../assets/svg";
 import { COLORS, SIZES } from "../constants";
+import * as Linking from "expo-linking";
 
 const HomeBlock_1 = () => {
     return (
@@ -10,8 +11,12 @@ const HomeBlock_1 = () => {
                 Национальный {"\n"} орбитальный исследовательский центр
             </Text>
             <View style={styles.logos}>
-                <Home_1 />
-                <Home_2 />
+				<TouchableOpacity onPressIn={() => Linking.openURL("https://www.roscosmos.ru/")}>
+					<Home_1 />
+				</TouchableOpacity>
+				<TouchableOpacity onPressIn={() => Linking.openURL("https://orbital-science.space/")}>
+					<Home_2 />
+				</TouchableOpacity>
             </View>
             <Text style={styles.title}>Космос</Text>
             <Text style={styles.subtitle}>Пространство инноваций</Text>
